@@ -1,10 +1,16 @@
-import Image from "next/image";
 import {
   ChevronRight,
   ArrowRight,
+  Clock,
+  CheckCircle,
+  Calendar,
+  DollarSign,
+  HelpCircle,
+  Target,
   Wallet,
   PiggyBank
 } from 'lucide-react'
+import Testimonials from "../components/Testimonials"
 
 export default function Home() {
   const offerings = [
@@ -25,6 +31,39 @@ export default function Home() {
       title: "Savings",
       description: "Your temptations stand no chance. This plan allows you to automate saving money daily, weekly, or monthly. Suitable for regular income earners, traders, freelancers, and students. The system encourages you by rewarding diligent savers.",
       image: "/images/save-image3.jpg"
+    }
+  ];
+
+  const features = [
+    {
+      icon: <Clock className="text-blue-500" size={48} />,
+      title: "Always On Time",
+      description: "We are quick to answer your questions and fulfill your requests concerning our services for saving and investing."
+    },
+    {
+      icon: <CheckCircle className="text-blue-500" size={48} />,
+      title: "Hard Working",
+      description: "We are arguably one of the most hard working savings and investments company there is, and our clientele can speak of the exquisite delivery of our services"
+    },
+    {
+      icon: <Calendar className="text-blue-500" size={48} />,
+      title: "24/7 Availability",
+      description: "Our services are available 24/7 round the clock digitally to meet your passive and urgent financial needs."
+    },
+    {
+      icon: <DollarSign className="text-blue-500" size={48} />,
+      title: "Maximum Profitability",
+      description: "We have put in the work to make your savings and investments yield profitable returns."
+    },
+    {
+      icon: <HelpCircle className="text-blue-500" size={48} />,
+      title: "Classified Transactions",
+      description: "Through our digital platform, we've ensured there is a smooth transition in managing your financial information."
+    },
+    {
+      icon: <Target className="text-blue-500" size={48} />,
+      title: "Always Accurate",
+      description: "The basis of our services stands on accuracy, with this we have set up the most reliable financial management system."
     }
   ];
 
@@ -49,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-about py-16 px-4 container mx-auto">
+      <section className="section-about py-16 px-4 max-w-7xl mx-auto">
         <div className="text-center">
           <div>
             <p className="text-xs uppercase text-blue-500 bg-blue-50 px-3 py-2 rounded-2xl font-semibold inline-block">about savevest</p>
@@ -113,9 +152,9 @@ export default function Home() {
                     Comprehensive Wealth Management
                   </li>
                 </ul>
-                <button className="flex items-center bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
-                  Learn More
-                  <ArrowRight className="ml-2" size={20} />
+                <button className="flex items-center space-x-3 text-white bg-blue-500 hover:bg-blue-700 rounded-full px-6 py-2.5 mt-4 cursor-pointer">
+                  <span>Learn more</span>
+                  <ChevronRight />
                 </button>
               </div>
             </div>
@@ -137,37 +176,40 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      {/* <section className="section-why-us bg-blue-50 py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-blue-500 text-center mb-8">
-            Why Choose Us
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <Award className="text-blue-500 mb-4" size={48} />
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Award-Winning Excellence
-              </h3>
-              <p className="text-gray-600">
-                Recognized for outstanding performance and innovative solutions
-                across multiple industries.
-              </p>
+      <section className="section-why-us bg-black text-white py-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="mb-4">
+              <p className="text-xs uppercase text-blue-500 bg-blue-50 px-3 py-2 rounded-2xl font-semibold inline-block">why choose us</p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <Globe className="text-blue-500 mb-4" size={48} />
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                Global Reach
-              </h3>
-              <p className="text-gray-600">
-                Serving clients worldwide with localized expertise and
-                international perspective.
-              </p>
-            </div>
+
+            <h2 className="text-3xl lg:text-4xl font-semibold mb-3 text-white">We Should Work Together</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-16">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-100 rounded-xl shadow-lg p-6 text-center hover:scale-105 transition-transform"
+              >
+                <div className="flex justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
-      <section className="section-testimonials"></section>
+      <section className="section-testimonials">
+        <Testimonials />
+      </section>
 
       <section className="section-contact"></section>
     </div>
