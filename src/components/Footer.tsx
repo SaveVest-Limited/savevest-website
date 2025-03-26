@@ -16,14 +16,13 @@ const Footer = () => {
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
         { name: "Services", href: "/services" },
-        { name: "Investments", href: "/investments" },
         { name: "Contact", href: "/contact" }
     ];
 
     const legalLinks = [
         { name: "Terms of Service", href: "/terms" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Disclaimer", href: "/disclaimer" }
+        { name: "Privacy Policy", href: "/privacy-policy" },
+        { name: "FAQs", href: "/faqs" }
     ];
 
     const socialLinks = [

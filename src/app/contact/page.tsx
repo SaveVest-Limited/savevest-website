@@ -11,7 +11,7 @@ const Contact = () => {
         enquiryType: '',
         description: ''
     });
-
+    const [loading,] = useState(false)
     const handleChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
         setFormData(prevState => ({
@@ -132,11 +132,8 @@ const Contact = () => {
                                 ></textarea>
                             </div>
 
-                            <button
-                                type="submit"
-                                className="w-full bg-gradient-to-r from-blue-600 to-purple-700 text-white py-3 rounded-lg hover:opacity-90 transition-opacity"
-                            >
-                                Send Message
+                            <button className="mt-2 text-white bg-blue-500 hover:bg-blue-700 rounded-full px-6 py-2.5 cursor-pointer">
+                                {loading ? 'Sending...' : 'Send Message'}
                             </button>
                         </form>
                     </div>
