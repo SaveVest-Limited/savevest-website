@@ -147,11 +147,41 @@ const PrivacyPolicy = () => {
                             
                             
 
-                            <h4 className="text-md md:text-lg font-medium mb-2">Usage Data:</h4>
+                            <h4 className="text-md md:text-lg font-medium mb-2">Upon account deletion:</h4>
                             <p className="text-gray-700 text-sm md:text-base mb-4">We collect information on how you interact with our app, including device information, IP address, and usage analytics.</p>
 
+                            <ul className="text-gray-700 mb-4 list-disc pl-6">
+                                <li>Your data will be removed from our system within 30 days, except as required by legal or regulatory obligations.</li>
+                                <li>Outstanding savings balances must be resolved before account deletion.</li>
+                            </ul>
 
+                        </div>
 
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-semibold mb-3">5. Security Measures</h3>
+                            <p className="text-gray-700 text-sm md:text-base mb-4">We implement advanced encryption, secure servers, and authentication protocols to protect your data. However, no system is 100% foolproof; users are encouraged to safeguard their login credentials.</p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-semibold mb-3">6. Updates to the Privacy Policy</h3>
+                            <p className="text-gray-700 text-sm md:text-base mb-4">We may update this policy periodically. Changes will be communicated via in-app notifications or email. Continued use of our services after updates indicates acceptance of the revised policy.</p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-xl md:text-2xl font-semibold mb-3">7. Contact Us</h3>
+                            <p className="text-gray-700 text-sm md:text-base mb-4">If you have questions or concerns about this Privacy Policy, contact us at:</p>
+
+                            <ul className="text-gray-700 mb-4 pl-6">
+                                <li className="font-semibold">SaveVest Limited.</li>
+                                <li><span className="font-semibold">Address:</span> 2a, Lateef Jakande Road, Agidingbi, Ikeja, Lagos State.</li>
+                                <li><span className="font-semibold">Email:</span> <a className='text-blue-500 underline' href="mailto:support@savevesting.com">support@savevesting.com</a>, <a className='text-blue-500 underline' href="mailto:savevestsavers@gmail.com">savevestsavers@gmail.com</a></li>
+                                <li><span className="font-semibold">Phone:</span> +234(0)703-149-4931</li>
+                            </ul>
+                        </div>
+
+                        <div className="text-center">
+                            <hr className="my-8 text-gray-300" />
+                            <h4 className="font-semibold text-sm md:text-base">Thank you for choosing SaveVest. Together, let’s achieve your financial goals!</h4>
                         </div>
                     </div>
                 </section>
