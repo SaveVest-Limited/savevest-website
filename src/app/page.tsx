@@ -68,7 +68,7 @@ export default function Home() {
   return (
     <div>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="hero-section rounded-[30px] mt-6 pt-8 px-10 items-center grid grid-cols-1 md:grid-cols-2">
+        <div className="hero-section rounded-[30px] mt-6 pt-8 px-2 md:px-10 items-center grid grid-cols-1 md:grid-cols-2">
           <div className="pl-2 md:pl-8">
             <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium">Welcome to Savevest.</h1>
             <p className="mt-4 text-slate-200 text-sm md:text-base">
@@ -176,7 +176,7 @@ export default function Home() {
       <ClientsSection />
 
       {/* Why Choose Us Section */}
-      <section className="section-why-us bg-black text-white py-16">
+      <section className="section-why-us bg-black text-white py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="mb-4">

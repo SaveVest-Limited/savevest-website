@@ -79,7 +79,7 @@ const Contact = () => {
                     </div>
 
                     <div>
-                        <h2 className="text-3xl font-bold mb-6 text-gray-800">Get in Touch</h2>
+                        <h2 className="text-3xl font-bold mb-6 text-gray-800 mt-6 md:mt-0">Get in Touch</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 gap-6">
                                 <input

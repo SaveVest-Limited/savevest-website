@@ -14,8 +14,8 @@ const Services = () => {
 
                     <div className="space-y-12 mt-16 md:mt-28 lg:mt-36">
                         {/* Service 1 */}
-                        <div className="flex flex-col md:flex-row items-center gap-6">
-                            <div className="md:w-1/2 text-center md:text-left">
+                        <div className="flex flex-col md:flex-row items-center gap-6 relative">
+                            <div className="md:w-1/2 text-left">
                                 <h3 className="text-2xl lg:text-4xl font-semibold mb-6">Financial Advisory Services</h3>
                                 
                                 <div className="space-y-6 w-full md:w-[85%]">
@@ -28,7 +28,7 @@ const Services = () => {
                                 </button>
                             </div>
                             {/* Image */}
-                            <div className="md:w-1/2">
+                            <div className="md:w-1/2 sticky top-2">
                                 <img
                                     src="/images/save-image1.jpg"
                                     alt="Service 1"
@@ -40,7 +40,7 @@ const Services = () => {
                         {/* Service 2 */}
                         <div className="flex flex-col md:flex-row-reverse items-start gap-6 relative">
                             {/* Content */}
-                            <div className="md:w-1/2 text-center md:text-left">
+                            <div className="md:w-1/2 text-left">
                                 <h3 className="text-2xl lg:text-4xl font-semibold mb-6">Investment Services</h3>
                                 
                                 <div className="space-y-6">
@@ -110,7 +110,7 @@ const Services = () => {
                         {/* Service 3 */}
                         <div className="flex flex-col md:flex-row items-start gap-6 relative">
                             {/* Content */}
-                            <div className="md:w-1/2 text-center md:text-left">
+                            <div className="md:w-1/2 text-left">
                                 <h3 className="text-2xl lg:text-4xl font-semibold mb-6">Savings</h3>
 
                                 <div className="space-y-6">

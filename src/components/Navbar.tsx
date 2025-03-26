@@ -5,7 +5,9 @@ import { useState } from "react";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const closeBar = () => {
+        setIsOpen(false)
+    }
     return (
         <nav className="bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -104,27 +106,27 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                        <Link href="/">
+                        <Link href="/" onClick={closeBar}>
                             <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 cursor-pointer">
                                 Home
                             </span>
                         </Link>
-                        <Link href="/about">
+                        <Link href="/about" onClick={closeBar}>
                             <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 cursor-pointer">
                                 About
                             </span>
                         </Link>
-                        <Link href="/services">
+                        <Link href="/services" onClick={closeBar}>
                             <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 cursor-pointer">
                                 Services
                             </span>
                         </Link>                        
-                        <Link href="/contact">
+                        <Link href="/contact" onClick={closeBar}>
                             <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 cursor-pointer">
                                 Contact
                             </span>
                         </Link>
-                        <Link href="/signup">
+                        <Link href="/signup" onClick={closeBar}>
                             <span className="mt-4 inline-block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 cursor-pointer">
                                 Sign Up
                             </span>
