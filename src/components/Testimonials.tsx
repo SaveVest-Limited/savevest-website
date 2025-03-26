@@ -56,7 +56,7 @@ const Testimonials = () => {
                 <div className="bg-white shadow-lg rounded-xl p-8 mb-8 relative">
                     <Quote className="absolute top-4 left-4 text-blue-500 opacity-20" size={64} />
                     <p className="text-base text-gray-800 mb-10 italic relative z-10">
-                        "{testimonials[currentIndex].quote}"
+                        &quot;{testimonials[currentIndex].quote}&quot;
                     </p>
 
                     <div className="mt-6">

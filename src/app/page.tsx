@@ -1,6 +1,5 @@
 import {
   ChevronRight,
-  ArrowRight,
   Clock,
   CheckCircle,
   Calendar,
