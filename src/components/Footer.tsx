@@ -39,7 +39,8 @@ const Footer = () => {
                 <div className="grid md:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div>
-                        <h3 className="text-2xl font-bold text-blue-500 mb-4">SaveVest</h3>
+                        {/* <h3 className="text-2xl font-bold text-blue-500 mb-4">SaveVest</h3> */}
+                        <img src='/images/logo.png' alt='logo' className='w-[130px] mb-4' />
                         <p className="text-gray-400 mb-4">
                             Empowering financial growth through innovative savings and investment solutions.
                         </p>

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -36,11 +35,6 @@ const Navbar = () => {
                             <Link href="/services">
                                 <span className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium cursor-pointer">
                                     Services
-                                </span>
-                            </Link>
-                            <Link href="/pricing">
-                                <span className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium cursor-pointer">
-                                    Pricing
                                 </span>
                             </Link>
                             <Link href="/contact">
@@ -124,19 +118,14 @@ const Navbar = () => {
                             <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 cursor-pointer">
                                 Services
                             </span>
-                        </Link>
-                        <Link href="/pricing">
-                            <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 cursor-pointer">
-                                Pricing
-                            </span>
-                        </Link>
+                        </Link>                        
                         <Link href="/contact">
                             <span className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 cursor-pointer">
                                 Contact
                             </span>
                         </Link>
                         <Link href="/signup">
-                            <span className="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 cursor-pointer">
+                            <span className="mt-4 inline-block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600 hover:bg-blue-700 cursor-pointer">
                                 Sign Up
                             </span>
                         </Link>

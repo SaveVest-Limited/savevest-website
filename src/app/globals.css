@@ -35,3 +35,26 @@ img {
   /* height: 90vh; */
   background-size: cover;
 }
+
+/* GET STARTED SECTION */
+.section-get-started {
+  background: linear-gradient(to right, #000000da, #00000093), url('/images/save-image3.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* KEYFRAMES FOR CLIENT SECTION */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}

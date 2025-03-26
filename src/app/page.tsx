@@ -7,10 +7,9 @@ import {
   DollarSign,
   HelpCircle,
   Target,
-  Wallet,
-  PiggyBank
 } from 'lucide-react'
 import Testimonials from "../components/Testimonials"
+import ClientsSection from '@/components/ClientsSection';
 
 export default function Home() {
   const offerings = [
@@ -36,32 +35,32 @@ export default function Home() {
 
   const features = [
     {
-      icon: <Clock className="text-blue-500" size={48} />,
+      icon: <Clock className="text-blue-500 group-hover:text-white" size={48} />,
       title: "Always On Time",
       description: "We are quick to answer your questions and fulfill your requests concerning our services for saving and investing."
     },
     {
-      icon: <CheckCircle className="text-blue-500" size={48} />,
+      icon: <CheckCircle className="text-blue-500 group-hover:text-white" size={48} />,
       title: "Hard Working",
       description: "We are arguably one of the most hard working savings and investments company there is, and our clientele can speak of the exquisite delivery of our services"
     },
     {
-      icon: <Calendar className="text-blue-500" size={48} />,
+      icon: <Calendar className="text-blue-500 group-hover:text-white" size={48} />,
       title: "24/7 Availability",
       description: "Our services are available 24/7 round the clock digitally to meet your passive and urgent financial needs."
     },
     {
-      icon: <DollarSign className="text-blue-500" size={48} />,
+      icon: <DollarSign className="text-blue-500 group-hover:text-white" size={48} />,
       title: "Maximum Profitability",
       description: "We have put in the work to make your savings and investments yield profitable returns."
     },
     {
-      icon: <HelpCircle className="text-blue-500" size={48} />,
+      icon: <HelpCircle className="text-blue-500 group-hover:text-white" size={48} />,
       title: "Classified Transactions",
       description: "Through our digital platform, we've ensured there is a smooth transition in managing your financial information."
     },
     {
-      icon: <Target className="text-blue-500" size={48} />,
+      icon: <Target className="text-blue-500 group-hover:text-white" size={48} />,
       title: "Always Accurate",
       description: "The basis of our services stands on accuracy, with this we have set up the most reliable financial management system."
     }
@@ -153,7 +152,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <button className="flex items-center space-x-3 text-white bg-blue-500 hover:bg-blue-700 rounded-full px-6 py-2.5 mt-4 cursor-pointer">
-                  <span>Learn more</span>
+                  <span>Get started</span>
                   <ChevronRight />
                 </button>
               </div>
@@ -175,6 +174,8 @@ export default function Home() {
 
       </section>
 
+      <ClientsSection />
+
       {/* Why Choose Us Section */}
       <section className="section-why-us bg-black text-white py-16">
         <div className="max-w-7xl mx-auto">
@@ -190,15 +191,15 @@ export default function Home() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-100 rounded-xl shadow-lg p-6 text-center hover:scale-105 transition-transform"
+                className="bg-white border border-gray-100 rounded-xl shadow-lg p-6 text-center hover:bg-blue-500 group duration-200"
               >
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-4 group-hover:text-white">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+                <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 group-hover:text-white">
                   {feature.description}
                 </p>
               </div>
