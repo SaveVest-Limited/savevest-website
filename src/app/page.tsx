@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import Testimonials from "../components/Testimonials"
 import ClientsSection from '@/components/ClientsSection';
+import { FaApple, FaAndroid } from 'react-icons/fa'
 
 export default function Home() {
   const offerings = [
@@ -67,21 +68,28 @@ export default function Home() {
 
   return (
     <div>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="hero-section rounded-[30px] mt-6 pt-8 px-2 md:px-10 items-center grid grid-cols-1 md:grid-cols-2">
-          <div className="pl-2 md:pl-8">
-            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium">Welcome to Savevest.</h1>
-            <p className="mt-4 text-slate-200 text-sm md:text-base">
-              SaveVest is an online “Savings & Investment platform” that enables you to Save regularly and earn interest on your savings. We also encourage short and long term investments. Our customers can testify to our efficient and reliable way of transacting business.
+      <section className="px-4 bg-[#131712] sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto rounded-[30px] py-12 px-2 md:px-10 items-center grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium leading-snug">Save Smarter.<br /> Earn More. <br /> Reach Your Goals Faster.</h1>
+            <p className="mt-4 text-slate-200 font-normal text-sm md:text-base w-[85%] leading-8">
+              Flexible savings plans tailored for you. With Savevest, you earn high interest, automate your savings, and join thousands growing their wealth effortlessly.
             </p>
 
-            <button className="flex items-center space-x-3 text-white bg-blue-500 hover:bg-blue-700 rounded-full px-6 py-2.5 mt-4 cursor-pointer">
-              <span>Get the app</span>
-              <ChevronRight />
-            </button>
+            <div className="flex items-center space-x-3 mt-6">
+              <a href="http://" target="_blank" className='bg-slate-200 hover:bg-blue-400 duration-200 px-4 py-3 flex space-x-2 text-black items-center'>
+                <FaApple className='w-6 h-6' />
+                <span className='text-sm font-medium'>Get on iPhone</span>
+              </a>
+
+              <a href="http://" target="_blank" className='bg-slate-200 hover:bg-blue-400 duration-200 px-4 py-3 flex space-x-2 text-black items-center'>
+                <FaAndroid className='w-6 h-6' />
+                <span className='text-sm font-medium'>Get on Android</span>
+              </a>
+            </div>
           </div>
-          <div>
-            <img src="/images/mockup-img.png" alt="mockup img" />
+          <div className='relative h-[300px] md:h-[550px] w-full'>
+            <img src="/images/save-hero.jpg" alt="mockup img" className='ml-auto w-full md:w-[90%] h-full object-cover object-left' />
           </div>
         </div>
       </section>
