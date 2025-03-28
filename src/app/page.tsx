@@ -7,9 +7,12 @@ import {
   HelpCircle,
   Target,
 } from 'lucide-react'
-import Testimonials from "../components/Testimonials"
+// import Testimonials from "../components/Testimonials"
+import Image from 'next/image';
 import ClientsSection from '@/components/ClientsSection';
-import { FaApple, FaAndroid } from 'react-icons/fa'
+import { FaApple, FaAndroid, FaLock, FaWallet, FaUsers } from 'react-icons/fa'
+import { Fade } from "react-awesome-reveal";
+import { BiSolidBank } from "react-icons/bi";
 
 export default function Home() {
   const offerings = [
@@ -68,31 +71,39 @@ export default function Home() {
 
   return (
     <div>
-      <section className="px-4 bg-[#131712] sm:px-6 lg:px-8">
+      <section className="px-4 bg-[#121412] sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto rounded-[30px] py-12 px-2 md:px-10 items-center grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium leading-snug">Save Smarter.<br /> Earn More. <br /> Reach Your Goals Faster.</h1>
-            <p className="mt-4 text-slate-200 font-normal text-sm md:text-base w-[85%] leading-8">
-              Flexible savings plans tailored for you. With Savevest, you earn high interest, automate your savings, and join thousands growing their wealth effortlessly.
-            </p>
+            <Fade direction='up'>
+              <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium leading-snug">Your Money.<br /> Your Future. <br /> <span className="text-blue-500 font-semibold">Start Saving</span> Today!</h1>
+            </Fade>
+            <Fade direction='up'>
+              <p className="mt-4 text-slate-200 font-normal text-sm md:text-base w-[85%] leading-8">
+                Flexible savings plans tailored for you. With Savevest, you earn high interest, automate your savings, and join thousands growing their wealth effortlessly.
+              </p>
+            </Fade>
 
-            <div className="flex items-center space-x-3 mt-6">
-              <a href="http://" target="_blank" className='bg-slate-200 hover:bg-blue-400 duration-200 px-4 py-3 flex space-x-2 text-black items-center'>
-                <FaApple className='w-6 h-6' />
-                <span className='text-sm font-medium'>Get on iPhone</span>
-              </a>
+            <Fade direction='up'>
+              <div className="flex items-center space-x-3 mt-6">
+                <a href="http://" target="_blank" className='bg-slate-200 hover:bg-blue-400 duration-200 px-4 py-3 flex space-x-2 text-black items-center'>
+                  <FaApple className='w-6 h-6' />
+                  <span className='text-sm font-medium'>Get on iPhone</span>
+                </a>
 
-              <a href="http://" target="_blank" className='bg-slate-200 hover:bg-blue-400 duration-200 px-4 py-3 flex space-x-2 text-black items-center'>
-                <FaAndroid className='w-6 h-6' />
-                <span className='text-sm font-medium'>Get on Android</span>
-              </a>
-            </div>
+                <a href="http://" target="_blank" className='bg-slate-200 hover:bg-blue-400 duration-200 px-4 py-3 flex space-x-2 text-black items-center'>
+                  <FaAndroid className='w-6 h-6' />
+                  <span className='text-sm font-medium'>Get on Android</span>
+                </a>
+              </div>
+            </Fade>
           </div>
           <div className='relative h-[300px] md:h-[550px] w-full'>
             <img src="/images/save-hero.jpg" alt="mockup img" className='ml-auto w-full md:w-[90%] h-full object-cover object-left' />
           </div>
         </div>
       </section>
+
+      <ClientsSection />
 
       <section className="section-about py-16 px-4 max-w-7xl mx-auto">
         <div className="text-center">
@@ -103,17 +114,47 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mt-4">What Savevest Offers</h2>
         </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 md:mt-16">
+          <div>
+            <h1 className='text-2xl md:text-4xl font-medium'>The <span className="font-semibold text-blue-500">Easiest</span> Way To <br /> Save Money</h1>
+          </div>
+          <div>
+            <div className="space-y-5">
+              <div className="bg-gray-50 hover:bg-blue-500 group duration-200 px-6 py-6 flex items-start space-x-5">
+                <BiSolidBank className='w-12 h-12 text-gray-700 group-hover:text-white -mt-1' />
+                <div>
+                  <h1 className="text-lg md:text-xl text-gray-900 group-hover:text-white ">Save without thinking about it.</h1>
+                  <p className="mt-3 text-gray-700 group-hover:text-white  text-sm md:text-base">Set it. Forget it. Whether it's daily, weekly, or monthly savings, you can save and just watch your wealth grow.</p>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 hover:bg-blue-500 group px-6 py-6 flex items-start space-x-5">
+                <FaLock className='w-8 h-8 text-gray-700 group-hover:text-white  -mt-1' />
+                <div>
+                  <h1 className="text-lg md:text-xl text-gray-900 group-hover:text-white ">Your Money is Secure.</h1>
+                  <p className="mt-3 text-gray-700 group-hover:text-white  text-sm md:text-base">Bank-level security, insured funds, and complete transparency - your savings are always protected.</p>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 hover:bg-blue-500 group px-6 py-6 flex items-start space-x-5">
+                <FaWallet className='w-8 h-8 text-gray-700 group-hover:text-white  -mt-1' />
+                <div>
+                  <h1 className="text-lg md:text-xl text-gray-900 group-hover:text-white ">Withdraw Anytime. It's Your Money.</h1>
+                  <p className="mt-3 text-gray-700 group-hover:text-white  text-sm md:text-base">Access your savings whenever you need them, or let them grow for even bigger rewards.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 md:mt-16">
+
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 md:mt-16">
             {offerings.map((offering, index) => (
               <div
                 key={index}
                 className="bg-white border border-gray-100 rounded-xl flex flex-col"
               >
                 <div className="p-6 flex-grow">
-                  {/* <div className="mb-4">
-                  {offering.icon}
-                </div> */}
                   <h3 className="text-xl font-bold text-gray-800 mb-3">
                     {offering.title}
                   </h3>
@@ -130,10 +171,10 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-white border border-gray-100 rounded-xl overflow-hidden mt-8">
-            {/* Content Section */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 items-center bg-white border border-gray-100 rounded-xl overflow-hidden mt-8">
+            
             <div className="p-8 md:pr-12">
               <div className="max-w-md">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -165,7 +206,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Image Section */}
+            
             <div>
               <div className="w-full h-[220px] md:h-[400px]">
                 <img
@@ -175,51 +216,108 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
+        <div className="pt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <div className="flex space-x-4 items-center">
+                <div className="p-8 bg-gray-50 rounded-lg">
+                  <FaUsers className='w-10 h-10 text-gray-800' />
+                </div>
 
+                <div className="content">
+                <h1 className="text-lg md:text-2xl font-medium text-gray-800">Try our new <span className="text-blue-500 font-semibold">group savings.</span></h1>
+                <p className="mt-3 text-sm md:text-base leading-relaxed text-gray-700">Team up with friends, family, or colleagues to reach your financial goals. Join a savings challenge and stay motivated with shared progress and rewards.</p>
+                </div>
+              </div>
+            </div>
+        </div>
       </section>
+      
 
-      <ClientsSection />
-
-      {/* Why Choose Us Section */}
-      <section className="section-why-us bg-black text-white py-16 px-4">
+      {/* Wallet Section */}
+      <section className="section-why-us bg-[#EDF6F5] text-white pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="mb-4">
-              <p className="text-xs uppercase text-blue-500 bg-blue-50 px-3 py-2 rounded-2xl font-semibold inline-block">why choose us</p>
-            </div>
-
-            <h2 className="text-3xl lg:text-4xl font-semibold mb-3 text-white">We Should Work Together</h2>
+            <h2 className="text-3xl lg:text-4xl font-medium mb-3 text-black">Your Money, Always Within Reach</h2>
+            <p className="text-sm md:text-base text-gray-700 w-[96%] md:w-[50%] xl:w-[45%] mx-auto">With the Savevest Wallet, you can store, manage, and move your money effortlessly all in one secure place.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 md:mt-16">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-100 rounded-xl shadow-lg p-6 text-center hover:bg-blue-500 group duration-200"
-              >
-                <div className="flex justify-center mb-4 group-hover:text-white">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 group-hover:text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 group-hover:text-white">
-                  {feature.description}
-                </p>
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-3 mt-8 md:mt-12">
+            <div className="relative w-full h-[450px] group overflow-hidden">
+              <img
+                src="/images/wallet1.jpg"
+                alt="wallet image 1"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-black/60"></div>
+
+              <h1 className="text-2xl md:text-3xl text-white absolute bottom-6 left-4 leading-10">
+                Instant Deposits & Withdrawals
+              </h1>
+            </div>
+
+            <div className='md:col-span-2 relative w-full h-[450px] group overflow-hidden'>
+              <img
+                src="/images/wallet2.jpg"
+                alt="wallet image 1"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-black/60"></div>
+
+              <div className="absolute bottom-6 left-4 leading-10">
+                <h1 className='text-2xl md:text-3xl text-white '>Track Your Transactions</h1>
+                <p className="text-white text-base mt-2">Get a clear view of every deposit, withdrawal, and transfer.</p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section-testimonials">
+      {/* <section className="section-testimonials">
         <Testimonials />
-      </section>
+      </section> */}
 
-      <section className="section-contact"></section>
+      <section className="section-started py-24">
+        <div className="relative w-full h-[600px] md:h-[500px] lg:h-[600px] overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0">
+            <Image
+              src="/images/get-started.jpg"
+              alt="Hero background"
+              fill
+              className="object-cover brightness-50"
+            />
+          </div>
+
+          {/* Content Container */}
+          <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between h-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            {/* Text Content */}
+            <div className="text-white max-w-xl text-center md:text-left py-8 md:py-0">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Click. Pay. Done.
+              </h1>
+              <p className="text-lg mb-6 text-gray-200">
+                Getting started with our solution is easy — just like our payments.
+              </p>
+              <button className="bg-teal-400 hover:bg-teal-500 text-black font-semibold py-3 px-6 rounded-lg transition-colors">
+                Get Started
+              </button>
+            </div>
+
+            {/* Image Container for Larger Screens */}
+            <div className="hidden md:block w-1/2 lg:w-2/5 relative h-[400px]">
+              <Image
+                src="/images/get-started.jpg"
+                alt="Person using laptop"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
