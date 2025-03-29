@@ -79,7 +79,7 @@ const Navbar = () => {
                         </Link>
 
                         <Link href="/signup">
-                            <span className={`${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-blue-400 text-black'} border border-blue-400 px-4 py-3 text-sm font-medium cursor-pointer transition duration-300`}>
+                            <span className={`${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-[#28166F] text-white'} border border-[#28166F] px-4 py-3 text-sm font-medium cursor-pointer transition duration-300`}>
                                 Create free account
                             </span>
                         </Link>

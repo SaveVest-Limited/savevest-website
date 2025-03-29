@@ -280,41 +280,26 @@ export default function Home() {
       </section> */}
 
       <section className="section-started py-24">
-        <div className="relative w-full h-[600px] md:h-[500px] lg:h-[600px] overflow-hidden">
-          {/* Background Image with Overlay */}
-          <div className="absolute inset-0">
-            <Image
-              src="/images/get-started.jpg"
-              alt="Hero background"
-              fill
-              className="object-cover brightness-50"
-            />
-          </div>
-
-          {/* Content Container */}
-          <div className="relative z-10 flex flex-col-reverse md:flex-row items-center justify-between h-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            {/* Text Content */}
-            <div className="text-white max-w-xl text-center md:text-left py-8 md:py-0">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Click. Pay. Done.
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-[#121412] max-w-7xl mx-auto items-center">
+          <div className='px-10'>
+            <div className="py-8 md:py-0">
+              <h1 className="text-white text-3xl md:text-4xl font-semibold mb-4 leading-12">
+                Download. Sign up. Save.
               </h1>
-              <p className="text-lg mb-6 text-gray-200">
-                Getting started with our solution is easy — just like our payments.
+              <p className="text-base md:text-md mb-6 text-gray-300">
+                Getting started with our platform is just that easy.
               </p>
-              <button className="bg-teal-400 hover:bg-teal-500 text-black font-semibold py-3 px-6 rounded-lg transition-colors">
+              <button className="bg-white text-black font-semibold py-3 px-6 text-sm md:text-base">
                 Get Started
               </button>
             </div>
-
-            {/* Image Container for Larger Screens */}
-            <div className="hidden md:block w-1/2 lg:w-2/5 relative h-[400px]">
-              <Image
-                src="/images/get-started.jpg"
-                alt="Person using laptop"
-                fill
-                className="object-contain"
-              />
-            </div>
+          </div>
+          <div className='w-full h-[450px]'>
+            <img
+              src="/images/get-started.jpg"
+              alt="Person using laptop"
+              className="object-cover w-full h-full brightness-50"
+            />
           </div>
         </div>
       </section>
