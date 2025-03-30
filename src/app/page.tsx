@@ -77,7 +77,7 @@ export default function Home() {
                   <BiSolidBank className='w-12 h-12 text-gray-700 group-hover:text-white -mt-1' />
                   <div>
                     <h1 className="text-lg md:text-xl text-gray-900 group-hover:text-white ">Save without thinking about it.</h1>
-                    <p className="mt-3 text-gray-700 group-hover:text-white  text-sm md:text-base">Set it. Forget it. Whether it's daily, weekly, or monthly savings, you can save and just watch your wealth grow.</p>
+                    <p className="mt-3 text-gray-700 group-hover:text-white  text-sm md:text-base">Set it. Forget it. Whether it&apos;s daily, weekly, or monthly savings, you can save and just watch your wealth grow.</p>
                   </div>
                 </div>
               </Fade>
@@ -96,7 +96,7 @@ export default function Home() {
                 <div className="bg-gray-50 hover:bg-blue-500 group rounded-sm px-6 py-6 flex items-start space-x-5">
                   <FaWallet className='w-8 h-8 text-gray-700 group-hover:text-white  -mt-1' />
                   <div>
-                    <h1 className="text-lg md:text-xl text-gray-900 group-hover:text-white ">Withdraw Anytime. It's Your Money.</h1>
+                    <h1 className="text-lg md:text-xl text-gray-900 group-hover:text-white ">Withdraw Anytime. It&apos;s Your Money.</h1>
                     <p className="mt-3 text-gray-700 group-hover:text-white  text-sm md:text-base">Access your savings whenever you need them, or let them grow for even bigger rewards.</p>
                   </div>
                 </div>
