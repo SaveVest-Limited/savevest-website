@@ -131,15 +131,16 @@ export default function Home() {
       <section className="section-group-savings bg-[#121412]">
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-4 md:pt-10">
           <div className='pt-8 md:pt-24'>
-            <h1 className="text-2xl md:text-5xl font-medium text-white leading-16">Create or join a  <br /> <span className="text-blue-500 font-semibold">savings plan.</span></h1>
-            <p className="mt-6 text-sm md:text-base leading-relaxed text-gray-300">Try out our new group savings.</p>
-            <p className="mt-3 text-sm md:text-base leading-relaxed text-gray-300">Team up with friends, family, or colleagues to reach your financial goals. Join a savings challenge and stay motivated with shared progress and rewards.</p>
-
+            <Fade direction='up'>
+              <h1 className="text-2xl md:text-5xl font-medium text-white leading-16">Create or join a  <br /> <span className="text-blue-500 font-semibold">savings plan.</span></h1>
+            </Fade>
+            <Fade direction='up'>
+              <p className="mt-6 text-sm md:text-base leading-relaxed text-gray-300">Try out our new group savings.</p>
+              <p className="mt-3 text-sm md:text-base leading-relaxed text-gray-300">Team up with friends, family, or colleagues to reach your financial goals. Join a savings challenge and stay motivated with shared progress and rewards.</p>
+            </Fade>
             <button className='px-4 py-3 bg-blue-500 text-sm cursor-pointer text-white rounded-sm mt-4'>Get started</button>
           </div>
-          <Fade direction='up'>
-            <img src='/images/plan-mockup.png' alt='plan mockup image' className='w-[85%] mx-auto' />
-          </Fade>
+          <img src='/images/plan-mockup.png' alt='plan mockup image' className='w-[85%] mx-auto' />
         </div>
       </section>
 

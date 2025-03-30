@@ -52,19 +52,24 @@ const Navbar = () => {
                                     Home
                                 </span>
                             </Link>
-                            <Link href="/about">
+                            <Link href="/stories">
                                 <span className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-gray-700 hover:text-blue-600'} px-3 py-2 text-sm font-medium cursor-pointer`}>
                                     Stories
                                 </span>
                             </Link>
-                            <Link href="/services">
+                            <Link href="/faqs">
                                 <span className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-gray-700 hover:text-blue-600'} px-3 py-2 text-sm font-medium cursor-pointer`}>
                                     FAQs
                                 </span>
                             </Link>
-                            <Link href="/contact">
+                            <Link href="/savings-calculator">
                                 <span className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-gray-700 hover:text-blue-600'} px-3 py-2 text-sm font-medium cursor-pointer`}>
                                     Calculator
+                                </span>
+                            </Link>
+                            <Link href="/contact">
+                                <span className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-gray-700 hover:text-blue-600'} px-3 py-2 text-sm font-medium cursor-pointer`}>
+                                    Contact
                                 </span>
                             </Link>
                         </div>
