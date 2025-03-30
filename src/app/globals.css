@@ -75,3 +75,45 @@ img {
 .animate-slide-down {
   animation: slideDown 0.3s ease-out;
 }
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+    /* Adjust height as needed */
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.section-group-savings {
+  clip-path: polygon(0 0, 50% 5%, 100% 0, 100% 100%, 51% 95%, 0 100%);
+}
+
+@media (max-width: 768px) {
+  .section-group-savings {
+    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%);;
+  }
+}
+
+/* .section-group-savings {
+  --s: 52px;
+  --c1: #121412;
+  --c2: #161717;
+
+  --_g: #0000 8%, var(--c1) 0 17%, #0000 0 58%;
+  background:
+    linear-gradient(135deg, #0000 20.5%, var(--c1) 0 29.5%, #0000 0) 0 calc(var(--s)/4),
+    linear-gradient(45deg, var(--_g)) calc(var(--s)/2) 0,
+    linear-gradient(135deg, var(--_g), var(--c1) 0 67%, #0000 0),
+    linear-gradient(45deg, var(--_g), var(--c1) 0 67%, #0000 0 83%, var(--c1) 0 92%, #0000 0),
+    var(--c2);
+  background-size: var(--s) var(--s);
+} */

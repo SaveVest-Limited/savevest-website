@@ -73,13 +73,13 @@ const Navbar = () => {
                     {/* Sign Up Button - Right */}
                     <div className="hidden md:flex space-x-2 items-center">
                         <Link href="/signup">
-                            <span className={`${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-transparent text-black'} border border-gray-300 px-4 py-3 text-sm font-medium cursor-pointer transition duration-300`}>
+                            <span className={`${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-transparent text-black'} rounded-sm border border-gray-300 px-4 py-3 text-sm font-medium cursor-pointer transition duration-300`}>
                                 Sign in
                             </span>
                         </Link>
 
                         <Link href="/signup">
-                            <span className={`${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-[#28166F] text-white'} border border-[#28166F] px-4 py-3 text-sm font-medium cursor-pointer transition duration-300`}>
+                            <span className={`${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'bg-[#28166F] text-white'} rounded-sm border border-[#28166F] px-4 py-3 text-sm font-medium cursor-pointer transition duration-300`}>
                                 Create free account
                             </span>
                         </Link>
