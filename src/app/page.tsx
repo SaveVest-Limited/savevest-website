@@ -14,7 +14,7 @@ export default function Home() {
       <section className="px-4 bg-[#121412] sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto rounded-[30px] py-12 px-2 md:px-10 items-center grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <Fade direction='up'>
+            <Fade direction="up">
               <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium leading-snug">Your Money.<br /> Your Future. <br /> <span className="text-blue-500 font-semibold">Start Saving</span> Today!</h1>
             </Fade>
             <Fade direction='up'>
@@ -53,26 +53,26 @@ export default function Home() {
 
       <section className="section-about py-16 px-4 max-w-7xl mx-auto">
         <div className="text-center">
-          <Fade direction='up'>
+          <Fade direction="up">
             <div>
               <p className="text-xs uppercase text-blue-500 bg-blue-50 px-3 py-2 rounded-2xl font-semibold inline-block">about savevest</p>
             </div>
           </Fade>
 
-          <Fade direction='up' delay={150}>
+          <Fade direction="up" delay={150}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mt-4">What Savevest Offers</h2>
           </Fade>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 md:mt-16">
           <div>
-            <Fade direction='up'>
+            <Fade direction="up">
               <h1 className='text-2xl md:text-4xl font-medium'>The <span className="font-semibold text-blue-500">Easiest</span> Way To <br /> Save Money</h1>
             </Fade>
           </div>
           <div>
             <div className="space-y-5">
-              <Fade direction='up'>
+              <Fade direction="up">
                 <div className="bg-gray-50 hover:bg-blue-500 group rounded-sm duration-200 px-6 py-6 flex items-start space-x-5">
                   <BiSolidBank className='w-12 h-12 text-gray-700 group-hover:text-white -mt-1' />
                   <div>
@@ -82,7 +82,7 @@ export default function Home() {
                 </div>
               </Fade>
 
-              <Fade direction='up' delay={150}>
+              <Fade direction="up" delay={150}>
                 <div className="bg-gray-50 hover:bg-blue-500 group rounded-sm px-6 py-6 flex items-start space-x-5">
                   <FaLock className='w-8 h-8 text-gray-700 group-hover:text-white  -mt-1' />
                   <div>
@@ -92,7 +92,7 @@ export default function Home() {
                 </div>
               </Fade>
 
-              <Fade direction='up' delay={250}>
+              <Fade direction="up" delay={250}>
                 <div className="bg-gray-50 hover:bg-blue-500 group rounded-sm px-6 py-6 flex items-start space-x-5">
                   <FaWallet className='w-8 h-8 text-gray-700 group-hover:text-white  -mt-1' />
                   <div>
@@ -110,7 +110,7 @@ export default function Home() {
         </div>
 
         {/* <div className="pt-16">
-          <Fade direction='up'>
+          <Fade direction="up">
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="flex space-x-4 items-center">
                 <div className="p-8 bg-gray-50 rounded-lg">
@@ -130,17 +130,17 @@ export default function Home() {
 
       <section className="section-group-savings bg-[#121412]">
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-4 md:pt-10">
-          <div className='pt-8 md:pt-24'>
-            <Fade direction='up'>
+          <div className="pt-8 md:pt-24">
+            <Fade direction="up">
               <h1 className="text-2xl md:text-5xl font-medium text-white leading-16">Create or join a  <br /> <span className="text-blue-500 font-semibold">savings plan.</span></h1>
             </Fade>
-            <Fade direction='up'>
+            <Fade direction="up">
               <p className="mt-6 text-sm md:text-base leading-relaxed text-gray-300">Try out our new group savings.</p>
               <p className="mt-3 text-sm md:text-base leading-relaxed text-gray-300">Team up with friends, family, or colleagues to reach your financial goals. Join a savings challenge and stay motivated with shared progress and rewards.</p>
             </Fade>
-            <button className='px-4 py-3 bg-blue-500 text-sm cursor-pointer text-white rounded-sm mt-4'>Get started</button>
+            <button className="px-4 py-3 bg-blue-500 text-sm cursor-pointer text-white rounded-sm mt-4">Get started</button>
           </div>
-          <img src='/images/plan-mockup.png' alt='plan mockup image' className='w-[85%] mx-auto' />
+          <img src="/images/plan-mockup.png" alt="plan mockup image" className="w-[85%] mx-auto" />
         </div>
       </section>
 
@@ -149,7 +149,7 @@ export default function Home() {
       {/* Wallet Section */}
       <section className="section-why-us text-white pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <Fade direction='up'>
+          <Fade direction="up">
             <div className="text-center">
               <h2 className="text-3xl lg:text-4xl font-medium mb-3 text-black">Your Money, Always Within Reach</h2>
               <p className="text-sm md:text-base text-gray-700 w-[96%] md:w-[50%] xl:w-[45%] mx-auto">With the Savevest Wallet, you can store, manage, and move your money effortlessly all in one secure place.</p>
