@@ -1,5 +1,6 @@
-// import Testimonials from "../components/Testimonials"
-// import Image from 'next/image';
+/* eslint-disable react/no-unescaped-entities */
+
+
 import ClientsSection from '@/components/ClientsSection';
 import { FaApple, FaAndroid, FaLock, FaWallet } from 'react-icons/fa'
 import { MdOutlineArrowOutward } from "react-icons/md";
