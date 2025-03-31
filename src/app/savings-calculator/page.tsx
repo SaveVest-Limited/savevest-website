@@ -54,7 +54,7 @@ const SavingsCalculator = () => {
                             See how much you need to save to reach your goals
                         </h1>
                         <p className="text-lg text-gray-600 mb-8">
-                            Plan your financial future with our savings calculator. Set your target, choose your timeline, and we'll help you figure out the perfect saving schedule.
+                            Plan your financial future with our savings calculator. Set your target, choose your timeline, and we&apos;ll help you figure out the perfect saving schedule.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button className="flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-sm">
@@ -136,7 +136,7 @@ const SavingsCalculator = () => {
                                     ₦{calculationResult.periodicSaving.toLocaleString()} {frequency}
                                 </p>
                                 <p className="text-gray-600">
-                                    You'll earn approximately ₦{calculationResult.totalInterest.toLocaleString()} in interest
+                                    You&apos;ll earn approximately ₦{calculationResult.totalInterest.toLocaleString()} in interest
                                 </p>
                                 <button
                                     onClick={() => setShowResult(false)}
