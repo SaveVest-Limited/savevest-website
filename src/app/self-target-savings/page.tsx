@@ -1,6 +1,6 @@
 "use client";
 
-import { FaUser, FaLock, FaChartLine } from 'react-icons/fa';
+import { FaUser, FaChartLine } from 'react-icons/fa';
 import { MdSavings } from 'react-icons/md';
 import { Fade } from "react-awesome-reveal";
 
