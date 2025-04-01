@@ -22,7 +22,8 @@ const Footer = () => {
     const legalLinks = [
         { name: "Terms of Service", href: "/terms" },
         { name: "Privacy Policy", href: "/privacy-policy" },
-        { name: "FAQs", href: "/faqs" }
+        { name: "FAQs", href: "/faqs" },
+        { name: "Delete Account", href: "/delete-account" }
     ];
 
     const socialLinks = [

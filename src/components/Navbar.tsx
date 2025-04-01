@@ -46,7 +46,7 @@ const Navbar = () => {
 
                     {/* Desktop Navigation Links - Center */}
                     <div className="hidden md:flex md:items-center md:justify-center md:flex-1">
-                        <div className="flex space-x-8">
+                        <div className="flex items-center space-x-8">
                             <Link href="/">
                                 <span className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-gray-700 hover:text-blue-600'} px-3 py-2 text-sm font-medium cursor-pointer`}>
                                     Home
@@ -57,6 +57,21 @@ const Navbar = () => {
                                     Stories
                                 </span>
                             </Link>
+                            <div className="relative group">
+                                <button className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-gray-700 hover:text-blue-600'} px-3 py-2 text-sm font-medium cursor-pointer`}>
+                                    Plans
+                                </button>
+                                <div className="absolute left-0 mt-5 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-40">
+                                    <div className="py-1">
+                                        <Link href="/self-target-savings" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Self Target Savings
+                                        </Link>
+                                        <Link href="/group-target-savings" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                            Group Target Savings
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
                             <Link href="/faqs">
                                 <span className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-gray-700 hover:text-blue-600'} px-3 py-2 text-sm font-medium cursor-pointer`}>
                                     FAQs
@@ -67,11 +82,11 @@ const Navbar = () => {
                                     Calculator
                                 </span>
                             </Link>
-                            <Link href="/contact">
+                            {/* <Link href="/contact">
                                 <span className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-gray-700 hover:text-blue-600'} px-3 py-2 text-sm font-medium cursor-pointer`}>
                                     Contact
                                 </span>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
 
@@ -145,26 +160,55 @@ const Navbar = () => {
                                 Home
                             </span>
                         </Link>
-                        <Link href="/about" onClick={closeBar}>
+                        <Link href="/stories" onClick={closeBar}>
                             <span className={`block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'text-white hover:text-gray-300 hover:bg-gray-900' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'} cursor-pointer`}>
-                                About
+                                Stories
                             </span>
                         </Link>
-                        <Link href="/services" onClick={closeBar}>
+                        <div className="px-3 py-2">
+                            <span className={`block text-base font-medium ${isScrolled ? 'text-white' : 'text-gray-700'} cursor-pointer`}>
+                                Plans
+                            </span>
+                            <div className="mt-2 space-y-1">
+                                <Link href="/self-target-savings" onClick={closeBar}>
+                                    <span className={`block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'text-white hover:text-gray-300 hover:bg-gray-900' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'} cursor-pointer`}>
+                                        Self Target Savings
+                                    </span>
+                                </Link>
+                                <Link href="/group-target-savings" onClick={closeBar}>
+                                    <span className={`block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'text-white hover:text-gray-300 hover:bg-gray-900' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'} cursor-pointer`}>
+                                        Group Target Savings
+                                    </span>
+                                </Link>
+                            </div>
+                        </div>
+                        <Link href="/faqs" onClick={closeBar}>
                             <span className={`block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'text-white hover:text-gray-300 hover:bg-gray-900' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'} cursor-pointer`}>
-                                Services
+                                FAQs
                             </span>
                         </Link>
-                        <Link href="/contact" onClick={closeBar}>
+                        <Link href="/savings-calculator" onClick={closeBar}>
+                            <span className={`block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'text-white hover:text-gray-300 hover:bg-gray-900' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'} cursor-pointer`}>
+                                Calculator
+                            </span>
+                        </Link>
+                        {/* <Link href="/contact" onClick={closeBar}>
                             <span className={`block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'text-white hover:text-gray-300 hover:bg-gray-900' : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'} cursor-pointer`}>
                                 Contact
                             </span>
-                        </Link>
-                        <Link href="/signup" onClick={closeBar}>
-                            <span className={`mt-4 inline-block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'text-white bg-blue-600 hover:bg-blue-700'} cursor-pointer`}>
-                                Sign Up
-                            </span>
-                        </Link>
+                        </Link> */}
+                        <div className="mt-4 space-y-2">
+                            <Link href="/signup" onClick={closeBar}>
+                                <span className={`block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'text-white bg-[#28166F] hover:bg-[#1f1155]'} cursor-pointer`}>
+                                    Create free account
+                                </span>
+                            </Link>
+                            <Link href="/signup" onClick={closeBar}>
+                                <span className={`block px-3 py-2 rounded-md text-base font-medium ${isScrolled ? 'bg-white text-black hover:bg-gray-200' : 'text-gray-700 bg-transparent border border-gray-300 hover:bg-gray-50'} cursor-pointer`}>
+                                    Sign in
+                                </span>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             )}
