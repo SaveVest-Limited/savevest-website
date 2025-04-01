@@ -1,7 +1,6 @@
 "use client";
 
 import { FaUsers, FaLock, FaChartLine } from 'react-icons/fa';
-import { MdGroups, MdSavings } from 'react-icons/md';
 import { Fade } from "react-awesome-reveal";
 
 const GroupTargetSavings = () => {
@@ -67,7 +66,7 @@ const GroupTargetSavings = () => {
                                     <FaChartLine className="h-6 w-6 text-purple-600" />
                                 </div>
                                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Progress Tracking</h3>
-                                <p className="text-gray-600">Monitor your group's savings progress with real-time updates and detailed analytics.</p>
+                                <p className="text-gray-600">Monitor your group&apos;s savings progress with real-time updates and detailed analytics.</p>
                             </div>
                         </Fade>
                     </div>

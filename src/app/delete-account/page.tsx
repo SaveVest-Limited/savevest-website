@@ -27,7 +27,7 @@ const DeleteAccount = () => {
                             Delete Your Account
                         </h1>
                         <p className="mt-4 text-slate-200 text-sm md:text-base">
-                            We're sorry to see you go. Please note that this action cannot be undone and all your data will be permanently deleted.
+                            We&apos;re sorry to see you go. Please note that this action cannot be undone and all your data will be permanently deleted.
                         </p>
                     </Fade>
                 </div>
