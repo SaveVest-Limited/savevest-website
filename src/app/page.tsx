@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 
-import ClientsSection from '@/components/ClientsSection';
+// import ClientsSection from '@/components/ClientsSection';
 import { FaApple, FaAndroid, FaLock, FaWallet } from 'react-icons/fa'
 import { MdOutlineArrowOutward } from "react-icons/md";
 import { Fade } from "react-awesome-reveal";
@@ -50,7 +50,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ClientsSection />
+      {/* <ClientsSection /> */}
 
       <section className="section-about py-16 px-4 max-w-7xl mx-auto">
         <div className="text-center">
@@ -68,7 +68,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 md:mt-16">
           <div>
             <Fade direction="up">
-              <h1 className='text-2xl md:text-4xl font-medium'>The <span className="font-semibold text-blue-500">Easiest</span> Way To <br /> Save Money</h1>
+              <h1 className='text-3xl md:text-5xl font-medium leading-12 md:leading-16 pl-3'>The <span className="font-semibold text-blue-500">Easiest</span> Way To <br /> Save Money</h1>
             </Fade>
           </div>
           <div>
@@ -131,9 +131,9 @@ export default function Home() {
 
       <section className="section-group-savings bg-[#121412]">
         <div className="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-4 md:pt-10">
-          <div className="pt-8 md:pt-24">
+          <div className="pt-8 md:pt-24 pl-4">
             <Fade direction="up">
-              <h1 className="text-2xl md:text-5xl font-medium text-white leading-16">Create or join a  <br /> <span className="text-blue-500 font-semibold">savings plan.</span></h1>
+              <h1 className="text-3xl md:text-5xl font-medium text-white leading-12 md:leading-16">Create or join a  <br /> <span className="text-blue-500 font-semibold">savings plan.</span></h1>
             </Fade>
             <Fade direction="up">
               <p className="mt-6 text-sm md:text-base leading-relaxed text-gray-300">Try out our new group savings.</p>
@@ -200,8 +200,8 @@ export default function Home() {
 
       <section className="section-faq  bg-[#EDF6F5] py-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className='flex flex-col justify-between'>
-            <h1 className="text-3xl md:text-4xl font-medium leading-12">Real support from real<br />  humans</h1>
+          <div className='flex flex-col justify-between pl-6 md:pl-3'>
+            <h1 className="text-3xl md:text-5xl font-medium leading-16">Real support from real<br />  humans</h1>
             <div>
               <button className='px-4 py-3 bg-blue-500 text-sm cursor-pointer text-white rounded-sm mt-4 flex space-x-3 items-center'>
                 <span>Contact support</span>
