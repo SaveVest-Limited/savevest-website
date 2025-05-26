@@ -6,88 +6,138 @@ import { Fade } from "react-awesome-reveal";
 
 const SelfTargetSavings = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 min-h-screen relative overflow-hidden">
+            {/* Background texture */}
+            <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20" />
+
             {/* Hero Section */}
-            <section className="bg-[#121412] px-4 py-16 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <Fade direction="up">
-                            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
-                                Set Your Goals, <br />
-                                Save at Your Pace with <br />
-                                <span className="text-blue-500 font-semibold">Personal Savings</span>
+            <section className="relative px-4 sm:px-6 lg:px-8 pt-32 pb-28">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-8">
+                            <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm">
+                                <span className="text-blue-400 text-sm font-medium">
+                                    Personal Savings
+                                </span>
+                            </div>
+
+                            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                                <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+                                    Set Your Goals,
+                                </span>
+                                <br />
+                                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                                    Save at Your Pace
+                                </span>
                             </h1>
-                        </Fade>
-                        <Fade direction="up">
-                            <p className="mt-6 text-slate-200 text-sm md:text-base leading-relaxed">
+
+                            <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
                                 Take control of your financial future with personalized savings targets. Our self-directed savings feature helps you build disciplined saving habits while earning competitive returns.
                             </p>
-                        </Fade>
-                    </div>
-                    <div className="relative h-[300px] md:h-[400px]">
-                        <img 
-                            src="/images/self-savings.jpg" 
-                            alt="Personal Savings" 
-                            className="w-full h-full object-cover rounded-lg"
-                        />
+
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                                    Start Saving Now
+                                </button>
+                                <button className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/20 transition-all duration-300">
+                                    Learn More
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="relative">
+                            <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
+                                <img
+                                    src="/images/self-savings.jpg"
+                                    alt="Personal Savings"
+                                    className="w-full h-[400px] object-cover rounded-2xl"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Features Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-                <div className="max-w-7xl mx-auto">
-                    <Fade direction="up">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-gray-900">Why Choose Self Target Savings?</h2>
-                            <p className="mt-4 text-lg text-gray-600">Customize your savings journey with features designed for personal success</p>
+            <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-900">
+                {/* Background texture */}
+                <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
+                
+                <div className="max-w-7xl mx-auto relative">
+                    <div className="text-center mb-20">
+                        <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full backdrop-blur-sm mb-6">
+                            <span className="text-purple-400 text-sm font-medium">
+                                Why Choose Self Target Savings
+                            </span>
                         </div>
-                    </Fade>
+                        <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
+                            Features Designed for Success
+                        </h2>
+                        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                            Customize your savings journey with tools built for personal financial growth
+                        </p>
+                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <Fade direction="up" cascade>
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <div className="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                                    <FaUser className="h-6 w-6 text-blue-600" />
+                        {[
+                            {
+                                icon: <FaUser className="h-6 w-6" />,
+                                title: "Personalized Goals",
+                                description: "Set and adjust your savings targets based on your personal financial objectives and timeline.",
+                                gradient: "from-blue-500 to-cyan-500",
+                            },
+                            {
+                                icon: <MdSavings className="h-6 w-6" />,
+                                title: "Flexible Deposits",
+                                description: "Choose your preferred deposit frequency and amount with automated or manual savings options.",
+                                gradient: "from-purple-500 to-pink-500",
+                            },
+                            {
+                                icon: <FaChartLine className="h-6 w-6" />,
+                                title: "Growth Tracking",
+                                description: "Monitor your savings progress with detailed analytics and performance insights.",
+                                gradient: "from-green-500 to-emerald-500",
+                            },
+                        ].map((feature, index) => (
+                            <div
+                                key={index}
+                                className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:from-white/10 hover:to-white/20 transition-all duration-500"
+                            >
+                                <div
+                                    className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${feature.gradient} mb-6`}
+                                >
+                                    {feature.icon}
                                 </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Personalized Goals</h3>
-                                <p className="text-gray-600">Set and adjust your savings targets based on your personal financial objectives and timeline.</p>
+                                <h3 className="text-2xl font-bold text-white mb-4">
+                                    {feature.title}
+                                </h3>
+                                <p className="text-gray-300 leading-relaxed">
+                                    {feature.description}
+                                </p>
                             </div>
-
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <div className="h-12 w-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                                    <MdSavings className="h-6 w-6 text-green-600" />
-                                </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Flexible Deposits</h3>
-                                <p className="text-gray-600">Choose your preferred deposit frequency and amount with automated or manual savings options.</p>
-                            </div>
-
-                            <div className="bg-white p-6 rounded-lg shadow-sm">
-                                <div className="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                                    <FaChartLine className="h-6 w-6 text-purple-600" />
-                                </div>
-                                <h3 className="text-xl font-semibold text-gray-900 mb-2">Growth Tracking</h3>
-                                <p className="text-gray-600">Monitor your savings progress with detailed analytics and performance insights.</p>
-                            </div>
-                        </Fade>
+                        ))}
                     </div>
                 </div>
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto bg-[#28166F] rounded-lg px-6 py-12 md:py-16 text-center">
-                    <Fade direction="up">
-                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                            Ready to start your savings journey?
-                        </h2>
-                        <p className="text-gray-200 mb-8 max-w-2xl mx-auto">
-                            Join thousands of individuals already growing their wealth with Savevest. Create your personal savings target today and take the first step towards financial freedom.
-                        </p>
-                        <button className="bg-white text-[#28166F] px-8 py-3 rounded-sm font-medium hover:bg-gray-100 transition duration-300">
-                            Start Saving Now
-                        </button>
-                    </Fade>
+            <section className="relative py-32 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-6xl mx-auto">
+                    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-gray-800 to-gray-900 p-1">
+                        <div className="bg-black/10 backdrop-blur-sm rounded-3xl p-16 text-center border border-gray-700">
+                            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                                Start Your Savings Journey Today
+                            </h2>
+                            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+                                Join thousands of individuals already growing their wealth with Savevest. Create your personal savings target today and take the first step towards financial freedom.
+                            </p>
+                            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                                Get Started Free
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

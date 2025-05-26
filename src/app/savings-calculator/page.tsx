@@ -52,7 +52,7 @@ const SavingsCalculator = () => {
                 <div className="absolute w-64 h-64 bg-purple-500/10 rounded-full blur-3xl right-[-8%] top-1/3 animate-pulse" />
                 <div className="absolute w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl left-1/4 bottom-[-8%] animate-bounce" />
             </div>
-            <div className="relative z-10 max-w-7xl mx-auto py-24 px-4">
+            <div className="relative z-10 max-w-7xl mx-auto pt-32 pb-24 px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     {/* Left Column */}
                     <div>

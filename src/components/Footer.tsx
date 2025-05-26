@@ -50,7 +50,7 @@ const Footer = () => {
             {/* Watermark background text */}
             <div className="pointer-events-none select-none absolute inset-0 flex items-center justify-center z-0">
                 <span
-                    className="font-extrabold text-[16vw] md:text-[10vw] lg:text-[7vw] xl:text-[6vw] 2xl:text-[5vw] text-gray-100 uppercase tracking-widest"
+                    className="font-extrabold text-[16vw] md:text-[10vw] lg:text-[7vw] xl:text-[6vw] 2xl:text-[5vw] text-gray-200 uppercase tracking-widest"
                     style={{
                         lineHeight: 1,
                         letterSpacing: '0.1em',

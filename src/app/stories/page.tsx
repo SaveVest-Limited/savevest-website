@@ -221,249 +221,230 @@ export default function ModernStoriesPage() {
     ];
 
     return (
-        <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 min-h-screen relative overflow-hidden">
-            {/* Animated background elements */}
-            <div className="absolute inset-0 overflow-hidden">
-                <div
-                    className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl transition-all duration-1000"
-                    style={{
-                        left: mousePosition.x / 10,
-                        top: mousePosition.y / 10,
-                    }}
-                />
-                <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
-                <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl animate-bounce" />
+      <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 min-h-screen relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div
+            className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl transition-all duration-1000"
+            style={{
+              left: mousePosition.x / 10,
+              top: mousePosition.y / 10,
+            }}
+          />
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl animate-bounce" />
+        </div>
+
+        {/* Hero Section */}
+        <section className="relative px-4 sm:px-6 lg:px-8 pt-32 pb-32">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full backdrop-blur-sm">
+                  <span className="text-green-400 text-sm font-medium">
+                    💚 100K+ Success Stories
+                  </span>
+                </div>
+
+                <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
+                    Real Experiences
+                  </span>
+                  <br />
+                  <span className="text-white">See How </span>
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    Savevest
+                  </span>
+                  <br />
+                  <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                    Changes Lives
+                  </span>
+                </h1>
+
+                <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
+                  Stories of real people using Savevest to transform their
+                  financial future. From first-time savers to investment
+                  experts, discover how our community achieves their dreams.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <GlowButton
+                    primary
+                    className="inline-flex items-center justify-center gap-3 w-full sm:w-auto"
+                  >
+                    <span>Add Your Story</span>
+                    <FaHeart className="w-4 h-4 animate-pulse" />
+                  </GlowButton>
+                  <GlowButton className="inline-flex items-center justify-center gap-3 w-full sm:w-auto">
+                    <span>Watch Video Stories</span>
+                    <FaPlay className="w-4 h-4" />
+                  </GlowButton>
+                </div>
+
+                {/* Quick stats */}
+                <div className="flex gap-8 pt-8">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-400">
+                      4.9★
+                    </div>
+                    <div className="text-gray-400 text-sm">Avg Rating</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-blue-400">
+                      ₦50B+
+                    </div>
+                    <div className="text-gray-400 text-sm">Total Saved</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-purple-400">
+                      98%
+                    </div>
+                    <div className="text-gray-400 text-sm">Success Rate</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <FloatingCard>
+                  <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
+                    <img
+                      src="/images/stories-hero.png"
+                      alt="Success stories visualization"
+                      className="w-full h-96 object-cover rounded-2xl"
+                    />
+                  </div>
+                </FloatingCard>
+
+                {/* Floating testimonial preview */}
+                <FloatingCard delay={1}>
+                  <div className="absolute -left-8 -bottom-8 bg-gradient-to-r from-blue-500/90 to-purple-500/90 backdrop-blur-xl text-white px-6 py-4 rounded-2xl shadow-lg max-w-xs">
+                    <div className="text-sm font-semibold mb-1">
+                      "Life-changing platform!"
+                    </div>
+                    <div className="text-xs opacity-90">
+                      - Sarah, saved ₦850K
+                    </div>
+                    <div className="flex gap-1 mt-2">
+                      {[...Array(5)].map((_, i) => (
+                        <FaStar key={i} className="w-3 h-3 text-yellow-300" />
+                      ))}
+                    </div>
+                  </div>
+                </FloatingCard>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stories Grid Section */}
+        <section className="relative py-32 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm mb-6">
+                <span className="text-blue-400 text-sm font-medium">
+                  Success Stories
+                </span>
+              </div>
+              <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
+                Inspiring Journeys
+              </h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Real people, real results, real transformation
+              </p>
             </div>
 
-            {/* Hero Section */}
-            <section className="relative px-4 sm:px-6 lg:px-8 pt-20 pb-32">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <div className="space-y-8">
-                            <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full backdrop-blur-sm">
-                                <span className="text-green-400 text-sm font-medium">
-                                    💚 100K+ Success Stories
-                                </span>
-                            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {stories.map((story) => (
+                <StoryCard {...story} />
+              ))}
+            </div>
+          </div>
+        </section>
 
-                            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                                <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
-                                    Real Experiences
-                                </span>
-                                <br />
-                                <span className="text-white">See How </span>
-                                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                                    Savevest
-                                </span>
-                                <br />
-                                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                                    Changes Lives
-                                </span>
-                            </h1>
+        {/* Video Stories Section */}
+        <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-900">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
 
-                            <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
-                                Stories of real people using Savevest to transform their financial
-                                future. From first-time savers to investment experts, discover how
-                                our community achieves their dreams.
-                            </p>
+          <div className="max-w-7xl mx-auto relative">
+            <div className="text-center mb-20">
+              <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                <span className="text-white">Watch Their </span>
+                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  Stories
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Hear directly from our community members about their financial
+                transformation
+              </p>
+            </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <GlowButton
-                                    primary
-                                    className="inline-flex items-center justify-center gap-3 w-full sm:w-auto"
-                                >
-                                    <span>Add Your Story</span>
-                                    <FaHeart className="w-4 h-4 animate-pulse" />
-                                </GlowButton>
-                                <GlowButton className="inline-flex items-center justify-center gap-3 w-full sm:w-auto">
-                                    <span>Watch Video Stories</span>
-                                    <FaPlay className="w-4 h-4" />
-                                </GlowButton>
-                            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  thumbnail: "/images/video1.jpg",
+                  title: "From Debt to Dreams",
+                  subtitle: "Sarah's 8-month journey",
+                  duration: "3:45",
+                },
+                {
+                  thumbnail: "/images/video2.jpg",
+                  title: "Building Business Capital",
+                  subtitle: "Aisha's entrepreneurship story",
+                  duration: "5:12",
+                },
+                {
+                  thumbnail: "/images/video3.jpg",
+                  title: "First Home Purchase",
+                  subtitle: "James saves for down payment",
+                  duration: "4:28",
+                },
+              ].map((video, index) => (
+                <div
+                  key={index}
+                  className="group relative overflow-hidden rounded-3xl cursor-pointer"
+                >
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
+                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                            {/* Quick stats */}
-                            <div className="flex gap-8 pt-8">
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-green-400">4.9★</div>
-                                    <div className="text-gray-400 text-sm">Avg Rating</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-blue-400">₦50B+</div>
-                                    <div className="text-gray-400 text-sm">Total Saved</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="text-3xl font-bold text-purple-400">98%</div>
-                                    <div className="text-gray-400 text-sm">Success Rate</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="relative">
-                            <FloatingCard>
-                                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
-                                    <img
-                                        src="/images/stories-hero.png"
-                                        alt="Success stories visualization"
-                                        className="w-full h-96 object-cover rounded-2xl"
-                                    />
-                                </div>
-                            </FloatingCard>
-
-                            {/* Floating testimonial preview */}
-                            <FloatingCard delay={1}>
-                                <div className="absolute -left-8 -bottom-8 bg-gradient-to-r from-blue-500/90 to-purple-500/90 backdrop-blur-xl text-white px-6 py-4 rounded-2xl shadow-lg max-w-xs">
-                                    <div className="text-sm font-semibold mb-1">"Life-changing platform!"</div>
-                                    <div className="text-xs opacity-90">- Sarah, saved ₦850K</div>
-                                    <div className="flex gap-1 mt-2">
-                                        {[...Array(5)].map((_, i) => (
-                                            <FaStar key={i} className="w-3 h-3 text-yellow-300" />
-                                        ))}
-                                    </div>
-                                </div>
-                            </FloatingCard>
-                        </div>
+                  {/* Play button */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 group-hover:bg-white/30 transition-all duration-300">
+                      <FaPlay className="w-8 h-8 text-white ml-1" />
                     </div>
+                  </div>
+
+                  {/* Video info */}
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <div className="text-xs bg-black/50 text-white px-2 py-1 rounded mb-2 w-fit">
+                      {video.duration}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-1">
+                      {video.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm">{video.subtitle}</p>
+                  </div>
                 </div>
-            </section>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            {/* Stories Grid Section */}
-            <section className="relative py-32 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-20">
-                        <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm mb-6">
-                            <span className="text-blue-400 text-sm font-medium">
-                                Success Stories
-                            </span>
-                        </div>
-                        <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
-                            Inspiring Journeys
-                        </h2>
-                        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                            Real people, real results, real transformation
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {stories.map((story, index) => (
-                            <FloatingCard key={index} delay={index * 0.2}>
-                                <StoryCard {...story} />
-                            </FloatingCard>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Video Stories Section */}
-            <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-900">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
-
-                <div className="max-w-7xl mx-auto relative">
-                    <div className="text-center mb-20">
-                        <h2 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                            <span className="text-white">Watch Their </span>
-                            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                                Stories
-                            </span>
-                        </h2>
-                        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                            Hear directly from our community members about their financial transformation
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            {
-                                thumbnail: "/images/video1.jpg",
-                                title: "From Debt to Dreams",
-                                subtitle: "Sarah's 8-month journey",
-                                duration: "3:45",
-                            },
-                            {
-                                thumbnail: "/images/video2.jpg",
-                                title: "Building Business Capital",
-                                subtitle: "Aisha's entrepreneurship story",
-                                duration: "5:12",
-                            },
-                            {
-                                thumbnail: "/images/video3.jpg",
-                                title: "First Home Purchase",
-                                subtitle: "James saves for down payment",
-                                duration: "4:28",
-                            },
-                        ].map((video, index) => (
-                            <div
-                                key={index}
-                                className="group relative overflow-hidden rounded-3xl cursor-pointer"
-                            >
-                                <img
-                                    src={video.thumbnail}
-                                    alt={video.title}
-                                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                                {/* Play button */}
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-6 group-hover:bg-white/30 transition-all duration-300">
-                                        <FaPlay className="w-8 h-8 text-white ml-1" />
-                                    </div>
-                                </div>
-
-                                {/* Video info */}
-                                <div className="absolute bottom-6 left-6 right-6">
-                                    <div className="text-xs bg-black/50 text-white px-2 py-1 rounded mb-2 w-fit">
-                                        {video.duration}
-                                    </div>
-                                    <h3 className="text-xl font-bold text-white mb-1">{video.title}</h3>
-                                    <p className="text-gray-300 text-sm">{video.subtitle}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="relative py-32 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto">
-                    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-gray-800 to-gray-900 p-1">
-                        <div className="bg-black/10 backdrop-blur-sm rounded-3xl p-16 text-center border border-gray-700">
-                            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                                Ready to Write Your Success Story?
-                            </h2>
-                            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                                Join thousands of satisfied savers who've transformed their financial lives with Savevest.
-                            </p>
-
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                                <GlowButton primary className="text-lg px-8 py-4 inline-flex items-center gap-3">
-                                    <span>Start Your Journey</span>
-                                    <MdOutlineArrowOutward className="w-5 h-5" />
-                                </GlowButton>
-                                <GlowButton className="text-lg px-8 py-4 inline-flex items-center gap-3">
-                                    <FaHeart className="w-5 h-5 text-red-400 animate-pulse" />
-                                    <span>Share Your Story</span>
-                                </GlowButton>
-                            </div>
-
-                            <div className="text-gray-300 text-sm">
-                                Join 100K+ happy savers • Start with ₦100 • No hidden fees
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <style jsx>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) rotate(0deg);
+        <style jsx>{`
+          @keyframes float {
+            0%,
+            100% {
+              transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+              transform: translateY(-20px) rotate(1deg);
+            }
           }
-          50% {
-            transform: translateY(-20px) rotate(1deg);
-          }
-        }
-      `}</style>
-        </div>
+        `}</style>
+      </div>
     );
 }
