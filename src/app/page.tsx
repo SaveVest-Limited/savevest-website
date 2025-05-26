@@ -4,8 +4,6 @@ import React, { useState, useEffect } from "react";
 import {
   FaApple,
   FaAndroid,
-  FaLock,
-  FaWallet,
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
@@ -15,7 +13,6 @@ import {
   MdTrendingUp,
   MdGroupWork,
 } from "react-icons/md";
-import { BiSolidBank } from "react-icons/bi";
 
 interface AnimatedCounterProps {
   end: number;
@@ -351,7 +348,7 @@ export default function ModernSavevestLanding() {
         {/* Background texture */}
         <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
-        
+
         <div className="max-w-7xl mx-auto relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -494,7 +491,7 @@ export default function ModernSavevestLanding() {
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  We've got answers.
+                  We&apos;ve got answers.
                 </span>
               </h2>
 

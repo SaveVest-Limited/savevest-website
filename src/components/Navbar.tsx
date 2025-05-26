@@ -55,7 +55,7 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-10 h-full">
-          {navLinks.map((link, idx) =>
+          {navLinks.map((link) =>
             !link.dropdown ? (
               <Link key={link.name} href={link.href} className="relative group flex items-center h-full">
                 <span

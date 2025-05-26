@@ -2,7 +2,6 @@
 
 import { FaUser, FaChartLine } from 'react-icons/fa';
 import { MdSavings } from 'react-icons/md';
-import { Fade } from "react-awesome-reveal";
 
 const SelfTargetSavings = () => {
     return (
