@@ -1,7 +1,6 @@
 "use client";
 
 import { FaUsers, FaLock, FaChartLine } from 'react-icons/fa';
-import { Fade } from "react-awesome-reveal";
 
 const GroupTargetSavings = () => {
     return (

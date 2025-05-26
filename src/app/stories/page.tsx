@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { FaHeart, FaQuoteLeft, FaStar, FaPlay } from "react-icons/fa";
-import { MdOutlineArrowOutward, MdVerified } from "react-icons/md";
+import { MdVerified } from "react-icons/md";
 
 interface FloatingCardProps {
     children: React.ReactNode;
@@ -80,67 +80,68 @@ const StoryCard: React.FC<StoryCardProps> = ({
     video = false,
 }) => {
     return (
-        <div className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:from-white/10 hover:to-white/20 transition-all duration-500">
-            {/* Quote icon */}
-            <div className="absolute top-6 right-6 text-blue-400/30">
-                <FaQuoteLeft className="w-8 h-8" />
-            </div>
-
-            {/* Video play button overlay */}
-            {video && (
-                <div className="absolute top-6 left-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 rounded-full opacity-75 group-hover:opacity-100 transition-opacity">
-                    <FaPlay className="w-3 h-3 ml-0.5" />
-                </div>
-            )}
-
-            {/* Rating stars */}
-            <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                    <FaStar
-                        key={i}
-                        className={`w-4 h-4 ${i < rating ? "text-yellow-400" : "text-gray-600"
-                            }`}
-                    />
-                ))}
-            </div>
-
-            {/* Story content */}
-            <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-                "{story}"
-            </p>
-
-            {/* Achievement highlight */}
-            <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-4 mb-6">
-                <div className="text-2xl font-bold text-green-400 mb-1">{amount}</div>
-                <div className="text-sm text-gray-400">saved in {timeframe}</div>
-            </div>
-
-            {/* User info */}
-            <div className="flex items-center gap-4">
-                <div className="relative">
-                    <img
-                        src={avatar}
-                        alt={name}
-                        className="w-12 h-12 rounded-full object-cover border-2 border-white/20"
-                    />
-                    {verified && (
-                        <div className="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-1">
-                            <MdVerified className="w-3 h-3 text-white" />
-                        </div>
-                    )}
-                </div>
-                <div>
-                    <div className="font-semibold text-white flex items-center gap-2">
-                        {name}
-                        {verified && <MdVerified className="w-4 h-4 text-blue-400" />}
-                    </div>
-                    <div className="text-sm text-gray-400">{title}</div>
-                </div>
-            </div>
-
-            {/* Hover effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:from-white/10 hover:to-white/20 transition-all duration-500">
+        {/* Quote icon */}
+        <div className="absolute top-6 right-6 text-blue-400/30">
+          <FaQuoteLeft className="w-8 h-8" />
         </div>
+
+        {/* Video play button overlay */}
+        {video && (
+          <div className="absolute top-6 left-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 rounded-full opacity-75 group-hover:opacity-100 transition-opacity">
+            <FaPlay className="w-3 h-3 ml-0.5" />
+          </div>
+        )}
+
+        {/* Rating stars */}
+        <div className="flex gap-1 mb-4">
+          {[...Array(5)].map((_, i) => (
+            <FaStar
+              key={i}
+              className={`w-4 h-4 ${
+                i < rating ? "text-yellow-400" : "text-gray-600"
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Story content */}
+        <p className="text-gray-300 leading-relaxed mb-6 text-lg">
+          &apos;{story}&apos;
+        </p>
+
+        {/* Achievement highlight */}
+        <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-4 mb-6">
+          <div className="text-2xl font-bold text-green-400 mb-1">{amount}</div>
+          <div className="text-sm text-gray-400">saved in {timeframe}</div>
+        </div>
+
+        {/* User info */}
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <img
+              src={avatar}
+              alt={name}
+              className="w-12 h-12 rounded-full object-cover border-2 border-white/20"
+            />
+            {verified && (
+              <div className="absolute -bottom-1 -right-1 bg-blue-500 rounded-full p-1">
+                <MdVerified className="w-3 h-3 text-white" />
+              </div>
+            )}
+          </div>
+          <div>
+            <div className="font-semibold text-white flex items-center gap-2">
+              {name}
+              {verified && <MdVerified className="w-4 h-4 text-blue-400" />}
+            </div>
+            <div className="text-sm text-gray-400">{title}</div>
+          </div>
+        </div>
+
+        {/* Hover effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      </div>
     );
 };
 
@@ -319,7 +320,7 @@ export default function ModernStoriesPage() {
                 <FloatingCard delay={1}>
                   <div className="absolute -left-8 -bottom-8 bg-gradient-to-r from-blue-500/90 to-purple-500/90 backdrop-blur-xl text-white px-6 py-4 rounded-2xl shadow-lg max-w-xs">
                     <div className="text-sm font-semibold mb-1">
-                      "Life-changing platform!"
+                      &apos;Life-changing platform!&apos;
                     </div>
                     <div className="text-xs opacity-90">
                       - Sarah, saved ₦850K
@@ -355,7 +356,9 @@ export default function ModernStoriesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {stories.map((story) => (
-                <StoryCard {...story} />
+                <div key={story.name}>
+                  <StoryCard {...story} />
+                </div>
               ))}
             </div>
           </div>

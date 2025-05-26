@@ -65,13 +65,16 @@ const FAQs = () => {
       <section className="relative px-4 sm:px-6 lg:px-8 pt-32 pb-16">
         <div className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm mb-6">
-            <span className="text-blue-400 text-sm font-medium uppercase tracking-wider">FAQs</span>
+            <span className="text-blue-400 text-sm font-medium uppercase tracking-wider">
+              FAQs
+            </span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-6">
             Frequently Asked Questions
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Everything you need to know about Savevest. Can't find your answer? Our support team is here to help.
+            Everything you need to know about Savevest. Can&lsquo;t find your
+            answer? Our support team is here to help.
           </p>
         </div>
       </section>
@@ -94,7 +97,9 @@ const FAQs = () => {
       <section className="max-w-3xl mx-auto px-4 pb-32">
         <div className="rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl p-8 md:p-12">
           {filteredFaqs.length === 0 ? (
-            <div className="text-center text-gray-400 py-12 text-lg">No results found.</div>
+            <div className="text-center text-gray-400 py-12 text-lg">
+              No results found.
+            </div>
           ) : (
             filteredFaqs.map((faq, idx) => (
               <AccordionItem
