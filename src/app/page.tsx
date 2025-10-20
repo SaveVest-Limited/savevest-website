@@ -44,7 +44,7 @@ interface FloatingCardProps {
 const FloatingCard: React.FC<FloatingCardProps> = ({ children, delay = 0 }) => {
   return (
     <div
-      className="transform hover:scale-105 transition-all duration-500 hover:shadow-2xl"
+      className="transform hover:scale-105 transition-all duration-500"
       style={{
         animation: `float 6s ease-in-out infinite`,
         animationDelay: `${delay}s`,
@@ -73,7 +73,7 @@ const GlowButton: React.FC<GlowButtonProps> = ({
         relative overflow-hidden group transition-all duration-300
         ${
           primary
-            ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
+            ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
             : "bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20"
         }
         px-6 py-3 rounded-full font-semibold
@@ -157,7 +157,7 @@ export default function ModernSavevestLanding() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -172,124 +172,104 @@ export default function ModernSavevestLanding() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative px-4 sm:px-6 lg:px-8 pt-32 pb-28">
+      <section className="relative pt-40 bg-blue-600">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             <div className="space-y-8">
-              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm">
-                <span className="text-blue-400 text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-white/20 border border-white/30 rounded-full backdrop-blur-sm">
+                <span className="text-white text-sm font-medium">
                   🚀 Trusted by 100K+ savers
                 </span>
               </div>
 
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent">
-                  Your Money.
-                </span>
-                <br />
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Your Future.
-                </span>
-                <br />
-                <span className="text-white">Start Saving</span>
-                <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  {" "}
-                  Today!
-                </span>
+              <h1 className="text-3xl lg:text-5xl font-bold leading-tight text-white">
+                The Smart Way to Save <br className="hidden md:block" /> and
+                Invest
               </h1>
 
-              <p className="text-sm lg:text-lg text-gray-300 leading-relaxed max-w-lg">
-                Revolutionary savings platform with AI-powered insights,
-                automated investments, and community-driven growth. Join the
-                future of personal finance.
+              <p className="text-sm md:text-base text-white leading-relaxed max-w-lg">
+                Savevest helps you save money, grow it automatically, and reach
+                your goals faster. You can save alone or with friends, track
+                your progress, and celebrate milestones together. Everything is
+                simple, safe, and designed to make saving fun and easy.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <GlowButton
-                  primary
-                  className="inline-flex items-center justify-center gap-x-3 w-full sm:w-auto"
-                >
-                  <FaApple className="w-5 h-5 flex-shrink-0 inline-flex mb-1" />
-                  <span className="pl-2">Download for iOS</span>
-                </GlowButton>
-                <GlowButton className="inline-flex items-center justify-center gap-x-3 w-full sm:w-auto">
-                  <FaAndroid className="w-5 h-5 flex-shrink-0 inline-flex" />
-                  <span className="pl-2">Get on Android</span>
-                </GlowButton>
-              </div>
-
-              {/* Stats */}
-              <div className="flex gap-8 pt-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">
-                    &#8358;
-                    <AnimatedCounter end={125} />
-                    M+
-                  </div>
-                  <div className="text-gray-400 text-sm">Total Saved</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400">
-                    <AnimatedCounter end={10} />
-                    K+
-                  </div>
-                  <div className="text-gray-400 text-sm">Active Users</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400">
-                    <AnimatedCounter end={15} />%
-                  </div>
-                  <div className="text-gray-400 text-sm">Avg. Returns</div>
-                </div>
+                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+                  <FaApple className="w-5 h-5" />
+                  Get on iPhone
+                </button>
+                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+                  <FaAndroid className="w-5 h-5" />
+                  Get on Android
+                </button>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="relative z-10">
-                {/* Main image container */}
-                <FloatingCard>
-                  <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
-                    <img
-                      src="/images/save-hero.jpg"
-                      alt="Savevest App Interface"
-                      className="w-full h-96 object-cover rounded-2xl"
-                    />
-                  </div>
-                </FloatingCard>
+            <div className="flex justify-center">
+              <div className="relative w-[95%] md:w-[65%]">
+                <img
+                  src="/images/hero-phone.jpeg"
+                  alt="Piggybank App Interface"
+                  className="w-full object-contain border-8 border-b-0 border-gray-900 rounded-t-4xl"
+                />
 
                 {/* Floating elements */}
-                <FloatingCard delay={1}>
-                  <div className="absolute -left-8 -top-8 bg-gradient-to-r from-green-400 to-emerald-400 text-white px-4 py-3 rounded-2xl shadow-lg backdrop-blur-sm">
-                    <div className="text-sm font-semibold">+N1,247</div>
-                    <div className="text-xs opacity-80">This month</div>
-                  </div>
-                </FloatingCard>
+                <div className="absolute -left-8 bottom-32 bg-green-500 text-white px-6 py-3 rounded-2xl shadow-lg z-10" style={{animation: 'float 6s ease-in-out infinite'}}>
+                  <div className="text-sm font-semibold">+₦1,247</div>
+                  <div className="text-xs opacity-80">This month</div>
+                </div>
 
-                <FloatingCard delay={2}>
-                  <div className="absolute -right-8 -top-4 bg-gradient-to-r from-purple-400 to-pink-400 text-white px-4 py-3 rounded-2xl shadow-lg backdrop-blur-sm">
-                    <div className="text-sm font-semibold">Goal: 85%</div>
-                    <div className="text-xs opacity-80">Almost there!</div>
-                  </div>
-                </FloatingCard>
+                <div className="absolute -right-8 top-32 bg-purple-500 text-white px-6 py-3 rounded-2xl shadow-lg z-10" style={{animation: 'float 6s ease-in-out infinite 2s'}}>
+                  <div className="text-sm font-semibold">Goal: 85%</div>
+                  <div className="text-xs opacity-80">Almost there!</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Download App Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23e5e7eb%22%20fill-opacity%3D%220.4%22%3E%3Ccircle%20cx%3D%227%22%20cy%3D%227%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-200/40 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-200/40 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-pink-200/30 rounded-full blur-2xl" />
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12 leading-16">
+            Download the{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              App
+            </span>{" "}
+            and <br className="hidden md:block" />
+            Start{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Saving
+            </span>
+          </h2>
+          <img
+            src="/images/under-hero.png"
+            alt="Download Savevest App"
+            className="w-[85%] mx-auto object-cover rounded-2xl"
+          />
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23e5e7eb%22%20fill-opacity%3D%220.4%22%3E%3Ccircle%20cx%3D%227%22%20cy%3D%227%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full backdrop-blur-sm mb-6">
-              <span className="text-purple-400 text-sm font-medium">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full backdrop-blur-sm mb-6">
+              <span className="text-blue-600 text-sm font-medium">
                 Why Choose Savevest
               </span>
             </div>
-            <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-6">
+            <h2 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">
               The Future of Saving
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Experience next-generation financial tools designed for the modern
               saver
             </p>
@@ -321,22 +301,22 @@ export default function ModernSavevestLanding() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:from-white/10 hover:to-white/20 transition-all duration-500"
+                className="group relative bg-white/80 backdrop-blur-xl border border-gray-200 rounded-3xl p-8 hover:bg-white transition-all duration-500 shadow-lg"
               >
                 <div
                   className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${feature.gradient} mb-6`}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
 
                 {/* Hover effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
             ))}
           </div>
@@ -344,7 +324,7 @@ export default function ModernSavevestLanding() {
       </section>
 
       {/* Group Savings Section */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-slate-900">
+      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-black to-gray-900">
         {/* Background texture */}
         <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-blue-900/20" />
@@ -391,7 +371,7 @@ export default function ModernSavevestLanding() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
+              <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-3">
                 <img
                   src="/images/get-started.jpg"
                   alt="Group Savings Interface"

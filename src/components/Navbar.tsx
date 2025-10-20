@@ -38,18 +38,22 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "backdrop-blur-lg bg-white/80 shadow-lg py-2"
-          : "bg-transparent py-6"
+          ? "backdrop-blur-lg bg-white/80 py-1"
+          : "bg-transparent py-4"
       }`}
       style={{
         borderBottom: isScrolled ? "1px solid #e5e7eb" : "none",
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 flex items-center justify-between min-h-[64px]">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between min-h-[64px]">
         {/* Logo */}
         <Link href="/">
           <div className="flex items-center cursor-pointer h-[48px]">
-            <img src="/images/logo.png" alt="logo" className="w-[130px] h-auto" />
+            <img 
+              src={isScrolled ? "/images/logo.png" : "/images/logo-white.png"} 
+              alt="logo" 
+              className="w-[130px] h-auto" 
+            />
           </div>
         </Link>
 
@@ -116,8 +120,11 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4 h-full">
           <Link href="/">
             <span
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-base tracking-wide border-0 outline-none focus:ring-2 focus:ring-blue-400 flex items-center"
-              style={{ letterSpacing: "0.04em" }}
+              className={`px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 text-sm border-0 outline-none focus:ring-2 focus:ring-blue-400 flex items-center ${
+                isScrolled 
+                  ? "bg-blue-600 text-white" 
+                  : "bg-white text-blue-600"
+              }`}
             >
               Download App
             </span>
@@ -227,7 +234,7 @@ const Navbar = () => {
         </div>
         <div className="mt-auto pb-10">
           <Link href="/">
-            <span className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-base tracking-wide border-0 outline-none focus:ring-2 focus:ring-blue-400">
+            <span className="block w-full text-center bg-blue-600 text-white px-7 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-base tracking-wide border-0 outline-none focus:ring-2 focus:ring-blue-400">
               Download App
             </span>
           </Link>
