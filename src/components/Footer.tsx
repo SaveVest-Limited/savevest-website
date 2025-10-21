@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     Facebook,
     Twitter,
@@ -67,7 +68,7 @@ const Footer = () => {
                 <div className="py-20 md:py-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
                     {/* Company Info */}
                     <div className="space-y-6">
-                        <img src="/images/logo.png" alt="SaveVest" className="w-[130px]" />
+                        <Image src="/images/logo.png" alt="SaveVest" className="w-[130px]" width={130} height={40} />
                         <p className="text-gray-600 text-base md:text-sm">
                             Empowering individuals and groups to achieve their financial goals through smart savings solutions.
                         </p>

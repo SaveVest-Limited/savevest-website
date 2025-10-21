@@ -1,3 +1,4 @@
+import Image from "next/image";
 import GetStarted from "@/components/GetStarted";
 const Services = () => {
     return (
@@ -29,10 +30,12 @@ const Services = () => {
                             </div>
                             {/* Image */}
                             <div className="md:w-1/2 sticky top-2">
-                                <img
+                                <Image
                                     src="/images/save-image1.jpg"
                                     alt="Service 1"
                                     className="w-full h-[400px] object-cover rounded-lg"
+                                    width={600}
+                                    height={400}
                                 />
                             </div>
                         </div>
@@ -99,10 +102,12 @@ const Services = () => {
                             </div>
                             {/* Image */}
                             <div className="md:w-1/2 sticky top-2">
-                                <img
+                                <Image
                                     src="/images/save-image2.jpg"
                                     alt="Service 2"
                                     className="w-full h-[400px] object-cover rounded-lg"
+                                    width={600}
+                                    height={400}
                                 />
                             </div>
                         </div>
@@ -135,10 +140,12 @@ const Services = () => {
                             </div>
                             {/* Image */}
                             <div className="md:w-1/2 sticky top-2">
-                                <img
+                                <Image
                                     src="/images/save-image3.jpg"
                                     alt="Service 3"
                                     className="w-full h-[450px] object-cover rounded-lg"
+                                    width={600}
+                                    height={450}
                                 />
                             </div>
                         </div>

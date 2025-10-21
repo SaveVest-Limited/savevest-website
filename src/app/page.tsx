@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   FaApple,
   FaAndroid,
@@ -9,51 +11,10 @@ import {
 } from "react-icons/fa";
 import {
   MdOutlineArrowOutward,
-  MdSecurity,
-  MdTrendingUp,
-  MdGroupWork,
 } from "react-icons/md";
 
-interface AnimatedCounterProps {
-  end: number;
-  duration?: number;
-}
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ end, duration = 2000 }) => {
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    let startTime: number | null = null;
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - (startTime || 0)) / duration, 1);
-      setCount(Math.floor(progress * end));
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-    requestAnimationFrame(animate);
-  }, [end, duration]);
-
-  return <span>{count.toLocaleString()}</span>;
-};
-
-interface FloatingCardProps {
-  children: React.ReactNode;
-  delay?: number;
-}
-
-const FloatingCard: React.FC<FloatingCardProps> = ({ children, delay = 0 }) => {
-  return (
-    <div
-      className="transform hover:scale-105 transition-all duration-500"
-      style={{
-        animation: `float 6s ease-in-out infinite`,
-        animationDelay: `${delay}s`,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
 
 interface GlowButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -103,7 +64,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpen,
         className="w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-300 rounded-2xl"
         onClick={onToggle}
       >
-        <span className="text-gray-900 font-medium text-lg">{question}</span>
+        <span className="text-gray-900 font-medium text-sm md:text-base">{question}</span>
         {isOpen ? (
           <FaChevronUp className="text-blue-600" />
         ) : (
@@ -115,7 +76,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({ question, answer, isOpen,
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-6 pb-5 text-gray-600 leading-relaxed">{answer}</div>
+        <div className="px-6 pb-5 text-gray-600 leading-relaxed text-sm md:text-base">{answer}</div>
       </div>
     </div>
   );
@@ -173,7 +134,7 @@ export default function ModernSavevestLanding() {
 
       {/* Hero Section */}
       <section className="relative pt-40 bg-blue-600">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6 md:px-2">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
             <div className="space-y-8">
               <div className="inline-flex items-center px-4 py-2 bg-white/20 border border-white/30 rounded-full backdrop-blur-sm">
@@ -195,11 +156,11 @@ export default function ModernSavevestLanding() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
                   <FaApple className="w-5 h-5" />
                   Get on iPhone
                 </button>
-                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
                   <FaAndroid className="w-5 h-5" />
                   Get on Android
                 </button>
@@ -208,10 +169,12 @@ export default function ModernSavevestLanding() {
 
             <div className="flex justify-center">
               <div className="relative w-[95%] md:w-[65%]">
-                <img
+                <Image
                   src="/images/hero-phone.jpeg"
                   alt="Piggybank App Interface"
                   className="w-full object-contain border-8 border-b-0 border-gray-900 rounded-t-4xl"
+                  width={400}
+                  height={600}
                 />
 
                 {/* Floating elements */}
@@ -317,10 +280,12 @@ export default function ModernSavevestLanding() {
                   </p>
                 </div>
                 <div className="flex justify-center mt-auto">
-                  <img
+                  <Image
                     src={feature.image}
                     alt={feature.title}
                     className="w-full max-w-sm h-auto object-contain border-8 border-b-0 border-gray-900 rounded-t-4xl pointer-events-none"
+                    width={400}
+                    height={300}
                   />
                 </div>
               </div>
@@ -339,10 +304,10 @@ export default function ModernSavevestLanding() {
           <div className="flex items-center px-8 lg:px-16 py-32">
             <div className="space-y-8">
               <h2 className="text-3xl lg:text-4xl text-white font-bold leading-tight">
-                Saving is easier when you're not doing it alone.
+                Saving is easier when you&lsquo;re not doing it alone.
               </h2>
 
-              <p className="text-base text-gray-300 leading-relaxed">
+              <p className="text-sm text-gray-300 leading-relaxed">
                 With Savevest, you can team up with friends or family to reach
                 shared goals, motivate each other, and celebrate every win
                 together.
@@ -373,10 +338,12 @@ export default function ModernSavevestLanding() {
           </div>
 
           <div className="relative">
-            <img
+            <Image
               src="/images/get-started.jpg"
               alt="Group Savings Interface"
               className="w-full h-full object-cover"
+              width={800}
+              height={600}
             />
           </div>
         </div>
@@ -462,25 +429,24 @@ export default function ModernSavevestLanding() {
       <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              <span className="text-gray-900">
-                Questions?
-              </span>
+            <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-6">
+              <span className="text-gray-900">Questions?</span>
               <br />
-              <span className="text-blue-600">
-                We&apos;ve got answers.
-              </span>
+              <span className="text-blue-600">We&apos;ve got answers.</span>
             </h2>
 
-            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
+            <p className="text-base text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
               24/7 human support from our expert team. Real people, real
               solutions, real fast.
             </p>
 
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 hover:bg-blue-700 transition-colors duration-300 mb-3">
-              <span>Contact Support</span>
+            <Link
+              href="/contact"
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 hover:bg-blue-700 transition-colors duration-300 mb-3"
+            >
+              <span className="text-sm">Contact Support</span>
               <MdOutlineArrowOutward className="w-5 h-5" />
-            </button>
+            </Link>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
@@ -498,15 +464,17 @@ export default function ModernSavevestLanding() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="flex justify-center">
+            <div className="flex justify-center hidden md:block">
               <div className="relative w-[85%]">
-                <img
+                <Image
                   src="/images/cta.jpeg"
                   alt="Savevest App"
                   className="object-contain border-8 border-b-0 border-gray-900 rounded-t-4xl"
+                  width={400}
+                  height={600}
                 />
               </div>
             </div>
@@ -514,10 +482,34 @@ export default function ModernSavevestLanding() {
             <div className="space-y-8">
               <div className="flex items-center gap-2 mb-6">
                 <div className="flex -space-x-2">
-                  <img src="https://i.pravatar.cc/40?img=1" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
-                  <img src="https://i.pravatar.cc/40?img=2" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
-                  <img src="https://i.pravatar.cc/40?img=3" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
-                  <img src="https://i.pravatar.cc/40?img=4" alt="User" className="w-10 h-10 rounded-full border-2 border-white" />
+                  <Image
+                    src="https://i.pravatar.cc/40?img=1"
+                    alt="User"
+                    className="w-10 h-10 rounded-full border-2 border-white"
+                    width={40}
+                    height={40}
+                  />
+                  <Image
+                    src="https://i.pravatar.cc/40?img=2"
+                    alt="User"
+                    className="w-10 h-10 rounded-full border-2 border-white"
+                    width={40}
+                    height={40}
+                  />
+                  <Image
+                    src="https://i.pravatar.cc/40?img=3"
+                    alt="User"
+                    className="w-10 h-10 rounded-full border-2 border-white"
+                    width={40}
+                    height={40}
+                  />
+                  <Image
+                    src="https://i.pravatar.cc/40?img=4"
+                    alt="User"
+                    className="w-10 h-10 rounded-full border-2 border-white"
+                    width={40}
+                    height={40}
+                  />
                 </div>
                 <span className="text-gray-600 font-medium">100K+</span>
               </div>
@@ -527,11 +519,11 @@ export default function ModernSavevestLanding() {
               </h2>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
                   <FaApple className="w-5 h-5" />
                   Get on iPhone
                 </button>
-                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+                <button className="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center justify-center gap-2">
                   <FaAndroid className="w-5 h-5" />
                   Get on Android
                 </button>

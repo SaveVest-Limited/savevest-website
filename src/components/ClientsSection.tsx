@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const clients = [
     "/images/clients/entrepreneur.webp",
@@ -16,11 +17,13 @@ const ClientsSection = () => {
             <div className="relative flex w-full">
                 <div className="flex whitespace-nowrap animate-scroll">
                     {[...clients, ...clients, ...clients, ...clients].map((client, index) => (
-                        <img
+                        <Image
                             key={index}
                             src={client}
                             alt={`Client ${index}`}
                             className="w-32 h-auto mx-6"
+                            width={128}
+                            height={64}
                         />
                     ))}
                 </div>

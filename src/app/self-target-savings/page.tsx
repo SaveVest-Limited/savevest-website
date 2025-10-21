@@ -1,7 +1,8 @@
 "use client";
 
-import { FaUser, FaChartLine } from 'react-icons/fa';
-import { MdSavings } from 'react-icons/md';
+import Image from "next/image";
+
+
 
 const SelfTargetSavings = () => {
     return (
@@ -27,7 +28,7 @@ const SelfTargetSavings = () => {
                                 Save at Your Pace
                             </h1>
 
-                            <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
+                            <p className="text-base text-gray-300 leading-relaxed max-w-lg">
                                 Take control of your financial future with personalized savings targets. Our self-directed savings feature helps you build disciplined saving habits while earning competitive returns.
                             </p>
 
@@ -43,10 +44,12 @@ const SelfTargetSavings = () => {
 
                         <div className="relative">
                             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
-                                <img
+                                <Image
                                     src="/images/self-savings.jpg"
                                     alt="Personal Savings"
                                     className="w-full h-[400px] object-cover rounded-2xl"
+                                    width={600}
+                                    height={400}
                                 />
                             </div>
                         </div>
@@ -106,33 +109,16 @@ const SelfTargetSavings = () => {
                                     </p>
                                 </div>
                                 <div className="flex justify-center mt-auto">
-                                    <img
+                                    <Image
                                         src={feature.image}
                                         alt={feature.title}
                                         className="w-full max-w-sm h-auto object-contain border-8 border-b-0 border-gray-900 rounded-t-4xl pointer-events-none"
+                                        width={400}
+                                        height={300}
                                     />
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="relative py-32 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-6xl mx-auto">
-                    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-gray-800 to-gray-900 p-1">
-                        <div className="bg-black/10 backdrop-blur-sm rounded-3xl p-16 text-center border border-gray-700">
-                            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                                Start Your Savings Journey Today
-                            </h2>
-                            <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                                Join thousands of individuals already growing their wealth with Savevest. Create your personal savings target today and take the first step towards financial freedom.
-                            </p>
-                            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                                Get Started Free
-                            </button>
-                        </div>
                     </div>
                 </div>
             </section>

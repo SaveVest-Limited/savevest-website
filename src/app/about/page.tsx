@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ClientsSection from "@/components/ClientsSection";
 import GetStarted from "@/components/GetStarted";
 
@@ -16,7 +17,7 @@ const About = () => {
 
                     <h3 className="text-gray-700 text-sm lg:text-lg mt-6 mb-8 text-center w-[98%] md:w-[55%] lg:w-[50%] mx-auto">SaveVest is a registered Cooperative under the Lagos State Government (LSCS 17111). All our transactions are done through the bank thereby giving a trace for all transactions.</h3>
                     <div className="w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden">
-                        <img src='/images/about-img.jpg' alt="save-img" className="h-full w-full object-cover" />
+                        <Image src='/images/about-img.jpg' alt="save-img" className="h-full w-full object-cover" width={800} height={450} />
                     </div>
                 </section>
 

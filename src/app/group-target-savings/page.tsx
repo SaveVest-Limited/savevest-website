@@ -1,4 +1,6 @@
 "use client";
+
+import Image from "next/image";
 const GroupTargetSavings = () => {
     return (
         <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 min-h-screen relative overflow-hidden">
@@ -23,7 +25,7 @@ const GroupTargetSavings = () => {
                                 Achieve More
                             </h1>
 
-                            <p className="text-lg text-gray-300 leading-relaxed max-w-lg">
+                            <p className="text-base text-gray-300 leading-relaxed max-w-lg">
                                 Join forces with friends, family, or colleagues to reach your financial goals faster. Our group target savings feature makes it easy to save collectively while maintaining transparency and trust.
                             </p>
 
@@ -39,10 +41,12 @@ const GroupTargetSavings = () => {
 
                         <div className="relative">
                             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
-                                <img
+                                <Image
                                     src="/images/group-savings.jpg"
                                     alt="Group Savings"
                                     className="w-full h-[400px] object-cover rounded-2xl"
+                                    width={600}
+                                    height={400}
                                 />
                             </div>
                         </div>
@@ -102,10 +106,12 @@ const GroupTargetSavings = () => {
                                     </p>
                                 </div>
                                 <div className="flex justify-center mt-auto">
-                                    <img
+                                    <Image
                                         src={feature.image}
                                         alt={feature.title}
                                         className="w-full max-w-sm h-auto object-contain border-8 border-b-0 border-gray-900 rounded-t-4xl pointer-events-none"
+                                        width={400}
+                                        height={300}
                                     />
                                 </div>
                             </div>
