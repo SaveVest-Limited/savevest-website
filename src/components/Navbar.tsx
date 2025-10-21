@@ -16,6 +16,7 @@ const navLinks = [
   },
   { name: "FAQs", href: "/faqs" },
   { name: "Calculator", href: "/savings-calculator" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const Navbar = () => {

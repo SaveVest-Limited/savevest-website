@@ -1,7 +1,4 @@
 "use client";
-
-import { FaUsers, FaLock, FaChartLine } from 'react-icons/fa';
-
 const GroupTargetSavings = () => {
     return (
         <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 min-h-screen relative overflow-hidden">
@@ -73,19 +70,19 @@ const GroupTargetSavings = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             {
-                                image: "/images/savings-plan.jpeg",
+                                image: "/images/group-savings.jpeg",
                                 title: "Group Management",
                                 description:
                                     "Easily create and manage savings groups with built-in tools for tracking contributions and progress.",
                             },
                             {
-                                image: "/images/wallet.jpeg",
+                                image: "/images/calculator.jpeg",
                                 title: "Secure Transactions",
                                 description:
                                     "Bank-grade security ensures all group contributions are protected and properly tracked.",
                             },
                             {
-                                image: "/images/bank-accounts.jpeg",
+                                image: "/images/savings.jpeg",
                                 title: "Progress Tracking",
                                 description:
                                     "Monitor your group's savings progress with real-time updates and detailed analytics.",

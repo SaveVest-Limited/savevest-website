@@ -1,149 +1,73 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
-const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        enquiryType: '',
-        description: ''
-    });
-    const [loading,] = useState(false)
-    const handleChange = (e: { target: { name: string; value: string; }; }) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
+const ContactPage = () => {
 
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
-        e.preventDefault();
-        // Form submission logic
-        console.log(formData);
-    };
-
-    const socialLinks = [
-        { icon: Facebook, url: '#' },
-        { icon: Instagram, url: '#' },
-        { icon: Linkedin, url: '#' },
-        { icon: Twitter, url: '#' },
-        // { icon: WhatsApp, url: '#' }
-    ];
     return (
-        <div>
-            <div className="max-w-7xl mx-auto px-4 py-16">
-                <div className="text-center">
-                    <div>
-                        <p className="text-xs uppercase text-blue-500 bg-blue-50 px-3 py-2 rounded-2xl font-semibold inline-block">contact us</p>
-                    </div>
-
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mt-4">Reach Out To Us</h2>
+        <div className="min-h-screen bg-white">
+            {/* Hero Section */}
+            <section className="bg-blue-600 py-32 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-4xl mx-auto text-center">
+                    <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                        Contact Us
+                    </h1>
+                    <p className="text-lg text-white/90 max-w-2xl mx-auto">
+                        Have questions or need support? We're here to help. Get in touch with our team and we'll get back to you as soon as possible.
+                    </p>
                 </div>
+            </section>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 p-6 mt-16 md:mt-28 lg:mt-36">
-                    <div className="flex flex-col justify-between">
-                        <div>
-                            <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
-                            <div className="space-y-6">
-                                <div className="flex items-center space-x-4">
-                                    <Phone className="w-6 h-6" />
-                                    <span>+234(0)703-149-4931</span>
-                                </div>
-                                <div className="flex items-center space-x-4">
-                                    <Mail className="w-6 h-6" />
-                                    <span>support@savevestsavers.com</span>
-                                </div>
-                                <div className="flex items-center space-x-4">
-                                    <MapPin className="w-6 h-6" />
-                                    <span>2a, Lateef Jakande Road, Adigidgbi, Ikeja, Lagos State</span>
-                                </div>
+            {/* Contact Section */}
+            <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                            Get in Touch
+                        </h2>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="text-center">
+                            <div className="bg-blue-600 p-4 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <FaEnvelope className="w-6 h-6 text-white" />
                             </div>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                            <p className="text-gray-600">support@savevesting.com</p>
                         </div>
 
-                        {/* Social Links */}
-                        <div className="flex space-x-4 mt-8">
-                            {socialLinks.map((social, index) => (
-                                <a
-                                    key={index}
-                                    href={social.url}
-                                    className="hover:bg-white/20 p-2 rounded-full transition-colors"
-                                >
-                                    <social.icon className="w-6 h-6" />
-                                </a>
-                            ))}
+                        <div className="text-center">
+                            <div className="bg-blue-600 p-4 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <FaPhone className="w-6 h-6 text-white" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                            <p className="text-gray-600">+234 (0) 123 456 7890</p>
+                        </div>
+
+                        <div className="text-center">
+                            <div className="bg-blue-600 p-4 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <FaMapMarkerAlt className="w-6 h-6 text-white" />
+                            </div>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Office</h3>
+                            <p className="text-gray-600">
+                                123 Financial District<br />
+                                Lagos, Nigeria
+                            </p>
                         </div>
                     </div>
 
-                    <div>
-                        <h2 className="text-3xl font-bold mb-6 text-gray-800 mt-6 md:mt-0">Get in Touch</h2>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div className="grid grid-cols-1 gap-6">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    placeholder="Your Name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                    required
-                                />
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email Address"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                    required
-                                />
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    placeholder="Phone Number"
-                                    value={formData.phone}
-                                    onChange={handleChange}
-                                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                    required
-                                />
-
-                                <select
-                                    name="enquiryType"
-                                    value={formData.enquiryType}
-                                    onChange={handleChange}
-                                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                >
-                                    <option value="">Select Enquiry Type</option>
-                                    <option value="complaint">Complaint</option>
-                                    <option value="suggestions">Suggestions</option>
-                                    <option value="visitation">Visitation</option>
-                                </select>
-
-                                <textarea
-                                    name="description"
-                                    placeholder="Your Message"
-                                    value={formData.description}
-                                    onChange={handleChange}
-                                    rows={4}
-                                    className="resize-none w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                ></textarea>
-                            </div>
-
-                            <button className="mt-2 text-white bg-blue-500 hover:bg-blue-700 rounded-full px-6 py-2.5 cursor-pointer">
-                                {loading ? 'Sending...' : 'Send Message'}
-                            </button>
-                        </form>
+                    <div className="bg-gray-50 p-8 rounded-2xl mt-16 text-center">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Hours</h3>
+                        <div className="space-y-2 text-gray-600">
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 4:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
                     </div>
-
                 </div>
-            </div>
-            
-            
+            </section>
         </div>
-    )
-}
+    );
+};
 
-export default Contact;
+export default ContactPage;
