@@ -120,9 +120,9 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4 h-full">
           <Link href="/">
             <span
-              className={`px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-300 text-sm border-0 outline-none focus:ring-2 focus:ring-blue-400 flex items-center ${
+              className={`px-5 py-2.5 rounded-lg font-medium transition-all duration-300 text-sm border-0 outline-none focus:ring-2 focus:ring-blue-400 flex items-center ${
                 isScrolled 
-                  ? "bg-blue-600 text-white" 
+                  ? "bg-blue-600 text-white"
                   : "bg-white text-blue-600"
               }`}
             >
