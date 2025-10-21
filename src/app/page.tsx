@@ -139,7 +139,7 @@ export default function ModernSavevestLanding() {
             <div className="space-y-8">
               <div className="inline-flex items-center px-4 py-2 bg-white/20 border border-white/30 rounded-full backdrop-blur-sm">
                 <span className="text-white text-sm font-medium">
-                  🚀 Trusted by 100K+ savers
+                  🚀 Trusted by 100K+ savevesters!
                 </span>
               </div>
 

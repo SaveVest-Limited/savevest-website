@@ -150,6 +150,23 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            
+            {/* Perfcreg Solutions Footer Note */}
+            <div className="w-full bg-blue-600 py-3">
+                <div className="text-center">
+                    <p className="text-white text-sm">
+                        Powered by{' '}
+                        <a 
+                            href="https://www.perfcreg.com/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-white underline hover:text-gray-800 transition-colors"
+                        >
+                            Perfcreg Solutions
+                        </a>
+                    </p>
+                </div>
+            </div>
         </footer>
     );
 };
